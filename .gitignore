@@ -53,8 +53,8 @@ Pods/
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
 
+Carthage/Checkouts
 Carthage/Build
 
 # fastlane
@@ -68,6 +68,8 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+/.idea
+/.vscode
 
 # End of https://www.gitignore.io/api/swift
  No newline at end of file

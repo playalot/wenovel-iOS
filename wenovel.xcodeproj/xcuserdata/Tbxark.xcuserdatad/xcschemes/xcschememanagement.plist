@@ -4,18 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>wenovel.xcscheme</key>
+		<key>WeNovel.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>12</integer>
+		</dict>
+		<key>WeNovelKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6A48C2991EB2003E00ACE032</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
 		<key>6AFCB14E1EB09488004F697D</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 	</dict>
 </dict>

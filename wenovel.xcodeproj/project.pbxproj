@@ -7,81 +7,331 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6AFCB1531EB09488004F697D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFCB1521EB09488004F697D /* AppDelegate.swift */; };
-		6AFCB1551EB09488004F697D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFCB1541EB09488004F697D /* ViewController.swift */; };
-		6AFCB1581EB09488004F697D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFCB1561EB09488004F697D /* Main.storyboard */; };
-		6AFCB15A1EB09488004F697D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AFCB1591EB09488004F697D /* Assets.xcassets */; };
-		6AFCB15D1EB09488004F697D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFCB15B1EB09488004F697D /* LaunchScreen.storyboard */; };
+		4D3F889954BAAD1259260030 /* Pods_WeNovelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F918AED3C95F5BB4DE2D78 /* Pods_WeNovelKit.framework */; };
+		6A094AFD1EB0ABC30058EA6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A094AF41EB0ABC30058EA6D /* AppDelegate.swift */; };
+		6A094B001EB0ABC30058EA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A094AFA1EB0ABC30058EA6D /* Assets.xcassets */; };
+		6A094B011EB0ABC30058EA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A094AFB1EB0ABC30058EA6D /* LaunchScreen.storyboard */; };
+		6A2CD4A51EB1AD150058B2A0 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2CD4A41EB1AD150058B2A0 /* Layout.swift */; };
+		6A48C2931EB1F6CB00ACE032 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2921EB1F6CB00ACE032 /* R.generated.swift */; };
+		6A48C29E1EB2003E00ACE032 /* wenovelkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A48C29C1EB2003E00ACE032 /* wenovelkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A48C2A11EB2003E00ACE032 /* WeNovelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */; };
+		6A48C2A21EB2003E00ACE032 /* WeNovelKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A48C2A81EB200BA00ACE032 /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A15CF551EB0A75400EC0903 /* NetworkService.framework */; };
+		6A48C2A91EB200BA00ACE032 /* CacheService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A15CF531EB0A75400EC0903 /* CacheService.framework */; };
+		6A48C2AB1EB2016000ACE032 /* WeNovelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2AA1EB2016000ACE032 /* WeNovelService.swift */; };
+		6A48C2AE1EB2031E00ACE032 /* WeNovelNetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2AD1EB2031E00ACE032 /* WeNovelNetWorking.swift */; };
+		6A48C2B11EB20E7400ACE032 /* WeNovelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2AF1EB20DA500ACE032 /* WeNovelEntity.swift */; };
+		744A4D5B910C7F2CABEA4A80 /* Pods_WeNovel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70A7D84944491E1C0871FA7 /* Pods_WeNovel.framework */; };
+		94F4129E6919620D95D78C7E /* NovelCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41D8B71DB19B6DEB5BAE0 /* NovelCardCollectionViewCell.swift */; };
+		94F419BC95FD83B23B6A3425 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F411D31620B4FCFBACC4FC /* DetailViewController.swift */; };
+		94F419F23517BE219C3B90CC /* SendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F4104B63722770E7FEBE93 /* SendViewController.storyboard */; };
+		94F41D12780FDDB8EC60517A /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F4198D4F888908099BFA96 /* DetailViewController.storyboard */; };
+		94F41D9DB67C1CB8FEF9A853 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41850A73E9878BAD14A88 /* MainViewController.swift */; };
+		94F41EB6E5439E38B46E01F9 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41A56647743FF0FEC561C /* SendViewController.swift */; };
+		94F41FCAC25301BDBCD28D1A /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F412DE99319F65E1C4A085 /* MainViewController.storyboard */; };
+		94F41FD9615A2854D3C8AA5E /* NovelCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F4165FFB7BF7C146654109 /* NovelCardCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6A48C29F1EB2003E00ACE032 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AFCB1471EB09488004F697D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A48C2991EB2003E00ACE032;
+			remoteInfo = wenovelkit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A48C2A61EB2003E00ACE032 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A48C2A21EB2003E00ACE032 /* WeNovelKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		6AFCB14F1EB09488004F697D /* wenovel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wenovel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AFCB1521EB09488004F697D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AFCB1541EB09488004F697D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6AFCB1571EB09488004F697D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6AFCB1591EB09488004F697D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6AFCB15C1EB09488004F697D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6AFCB15E1EB09488004F697D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F918AED3C95F5BB4DE2D78 /* Pods_WeNovelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeNovelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		538D37371F337A6F6DBC8212 /* Pods-WeNovelKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovelKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovelKit/Pods-WeNovelKit.release.xcconfig"; sourceTree = "<group>"; };
+		59B4FDA3EDA69EF96291EF5C /* Pods-WeNovel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovel.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovel/Pods-WeNovel.release.xcconfig"; sourceTree = "<group>"; };
+		6A094AF41EB0ABC30058EA6D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A094AFA1EB0ABC30058EA6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A094AFC1EB0ABC30058EA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A15CF521EB0A75400EC0903 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		6A15CF531EB0A75400EC0903 /* CacheService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CacheService.framework; path = Carthage/Build/iOS/CacheService.framework; sourceTree = "<group>"; };
+		6A15CF541EB0A75400EC0903 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		6A15CF551EB0A75400EC0903 /* NetworkService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkService.framework; path = Carthage/Build/iOS/NetworkService.framework; sourceTree = "<group>"; };
+		6A15CF561EB0A75400EC0903 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		6A15CF571EB0A75400EC0903 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		6A15CF581EB0A75400EC0903 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		6A15CF591EB0A75400EC0903 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		6A15CF5A1EB0A75400EC0903 /* YYCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYCache.framework; path = Carthage/Build/iOS/YYCache.framework; sourceTree = "<group>"; };
+		6A2CD4A41EB1AD150058B2A0 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		6A48C2831EB1EB7300ACE032 /* YYText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYText.framework; path = Carthage/Build/iOS/YYText.framework; sourceTree = "<group>"; };
+		6A48C2851EB1EB8400ACE032 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Carthage/Build/iOS/OneSignal.framework; sourceTree = "<group>"; };
+		6A48C28D1EB1F3B400ACE032 /* playkit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = playkit.framework; path = Carthage/Build/iOS/playkit.framework; sourceTree = "<group>"; };
+		6A48C28F1EB1F4B000ACE032 /* PlayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlayKit.framework; path = Carthage/Build/iOS/PlayKit.framework; sourceTree = "<group>"; };
+		6A48C2921EB1F6CB00ACE032 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeNovelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A48C29C1EB2003E00ACE032 /* wenovelkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wenovelkit.h; sourceTree = "<group>"; };
+		6A48C29D1EB2003E00ACE032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A48C2AA1EB2016000ACE032 /* WeNovelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeNovelService.swift; sourceTree = "<group>"; };
+		6A48C2AC1EB2023D00ACE032 /* wenovel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = wenovel.entitlements; path = ../wenovel.entitlements; sourceTree = "<group>"; };
+		6A48C2AD1EB2031E00ACE032 /* WeNovelNetWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeNovelNetWorking.swift; sourceTree = "<group>"; };
+		6A48C2AF1EB20DA500ACE032 /* WeNovelEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeNovelEntity.swift; sourceTree = "<group>"; };
+		6AFCB14F1EB09488004F697D /* WeNovel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeNovel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AFCB15E1EB09488004F697D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = wenovel/Info.plist; sourceTree = "<group>"; };
+		8DBD577C7BD11C412396CDEF /* Pods-WeNovelKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovelKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovelKit/Pods-WeNovelKit.debug.xcconfig"; sourceTree = "<group>"; };
+		94F4104B63722770E7FEBE93 /* SendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendViewController.storyboard; sourceTree = "<group>"; };
+		94F411D31620B4FCFBACC4FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		94F412DE99319F65E1C4A085 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		94F4165FFB7BF7C146654109 /* NovelCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NovelCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		94F41850A73E9878BAD14A88 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		94F4198D4F888908099BFA96 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		94F41A56647743FF0FEC561C /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		94F41D8B71DB19B6DEB5BAE0 /* NovelCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		C30A4889094C62B26E4E60F3 /* Pods-WeNovel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovel/Pods-WeNovel.debug.xcconfig"; sourceTree = "<group>"; };
+		E70A7D84944491E1C0871FA7 /* Pods_WeNovel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeNovel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6A48C2961EB2003E00ACE032 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A48C2A81EB200BA00ACE032 /* NetworkService.framework in Frameworks */,
+				6A48C2A91EB200BA00ACE032 /* CacheService.framework in Frameworks */,
+				4D3F889954BAAD1259260030 /* Pods_WeNovelKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AFCB14C1EB09488004F697D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A48C2A11EB2003E00ACE032 /* WeNovelKit.framework in Frameworks */,
+				744A4D5B910C7F2CABEA4A80 /* Pods_WeNovel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A094AF31EB0ABC30058EA6D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6A094AF41EB0ABC30058EA6D /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6A094AF51EB0ABC30058EA6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94F41CE97B3DC489032601FF /* Send */,
+				94F418D2D53AFF2D65339E2B /* Detail */,
+				94F41BE7650E87BBC7F3BE72 /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6A094AF91EB0ABC30058EA6D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6A48C2AC1EB2023D00ACE032 /* wenovel.entitlements */,
+				6A094AFA1EB0ABC30058EA6D /* Assets.xcassets */,
+				6A094AFB1EB0ABC30058EA6D /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6A15CF511EB0A75300EC0903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A48C28F1EB1F4B000ACE032 /* PlayKit.framework */,
+				6A48C28D1EB1F3B400ACE032 /* playkit.framework */,
+				6A48C2851EB1EB8400ACE032 /* OneSignal.framework */,
+				6A48C2831EB1EB7300ACE032 /* YYText.framework */,
+				6A15CF521EB0A75400EC0903 /* Alamofire.framework */,
+				6A15CF531EB0A75400EC0903 /* CacheService.framework */,
+				6A15CF541EB0A75400EC0903 /* KeychainAccess.framework */,
+				6A15CF551EB0A75400EC0903 /* NetworkService.framework */,
+				6A15CF561EB0A75400EC0903 /* ObjectMapper.framework */,
+				6A15CF571EB0A75400EC0903 /* RxBlocking.framework */,
+				6A15CF581EB0A75400EC0903 /* RxCocoa.framework */,
+				6A15CF591EB0A75400EC0903 /* RxSwift.framework */,
+				6A15CF5A1EB0A75400EC0903 /* YYCache.framework */,
+				E70A7D84944491E1C0871FA7 /* Pods_WeNovel.framework */,
+				16F918AED3C95F5BB4DE2D78 /* Pods_WeNovelKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A2CD4A31EB1ACF70058B2A0 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				6A48C2921EB1F6CB00ACE032 /* R.generated.swift */,
+				6A2CD4A41EB1AD150058B2A0 /* Layout.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		6A48C29B1EB2003E00ACE032 /* WeNovelKit */ = {
+			isa = PBXGroup;
+			children = (
+				6A48C29C1EB2003E00ACE032 /* wenovelkit.h */,
+				6A48C29D1EB2003E00ACE032 /* Info.plist */,
+				6A48C2AA1EB2016000ACE032 /* WeNovelService.swift */,
+				6A48C2AD1EB2031E00ACE032 /* WeNovelNetWorking.swift */,
+				6A48C2AF1EB20DA500ACE032 /* WeNovelEntity.swift */,
+			);
+			name = WeNovelKit;
+			path = wenovelkit;
+			sourceTree = "<group>";
+		};
 		6AFCB1461EB09488004F697D = {
 			isa = PBXGroup;
 			children = (
-				6AFCB1511EB09488004F697D /* wenovel */,
+				6AFCB1511EB09488004F697D /* WeNovel */,
+				6AFCB15E1EB09488004F697D /* Info.plist */,
+				6A48C29B1EB2003E00ACE032 /* WeNovelKit */,
 				6AFCB1501EB09488004F697D /* Products */,
+				6A15CF511EB0A75300EC0903 /* Frameworks */,
+				FB94DC74C487A2BDBD5ABA5F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		6AFCB1501EB09488004F697D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AFCB14F1EB09488004F697D /* wenovel.app */,
+				6AFCB14F1EB09488004F697D /* WeNovel.app */,
+				6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6AFCB1511EB09488004F697D /* wenovel */ = {
+		6AFCB1511EB09488004F697D /* WeNovel */ = {
 			isa = PBXGroup;
 			children = (
-				6AFCB1521EB09488004F697D /* AppDelegate.swift */,
-				6AFCB1541EB09488004F697D /* ViewController.swift */,
-				6AFCB1561EB09488004F697D /* Main.storyboard */,
-				6AFCB1591EB09488004F697D /* Assets.xcassets */,
-				6AFCB15B1EB09488004F697D /* LaunchScreen.storyboard */,
-				6AFCB15E1EB09488004F697D /* Info.plist */,
+				6A094AF31EB0ABC30058EA6D /* AppDelegate */,
+				6A2CD4A31EB1ACF70058B2A0 /* General */,
+				6A094AF51EB0ABC30058EA6D /* Controllers */,
+				6A094AF91EB0ABC30058EA6D /* Resource */,
+				94F41997DD22FCC004A38E5D /* Views */,
 			);
+			name = WeNovel;
 			path = wenovel;
+			sourceTree = "<group>";
+		};
+		94F418D2D53AFF2D65339E2B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				94F4198D4F888908099BFA96 /* DetailViewController.storyboard */,
+				94F411D31620B4FCFBACC4FC /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		94F41997DD22FCC004A38E5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94F41D8B71DB19B6DEB5BAE0 /* NovelCardCollectionViewCell.swift */,
+				94F4165FFB7BF7C146654109 /* NovelCardCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94F41BE7650E87BBC7F3BE72 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94F412DE99319F65E1C4A085 /* MainViewController.storyboard */,
+				94F41850A73E9878BAD14A88 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		94F41CE97B3DC489032601FF /* Send */ = {
+			isa = PBXGroup;
+			children = (
+				94F4104B63722770E7FEBE93 /* SendViewController.storyboard */,
+				94F41A56647743FF0FEC561C /* SendViewController.swift */,
+			);
+			path = Send;
+			sourceTree = "<group>";
+		};
+		FB94DC74C487A2BDBD5ABA5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C30A4889094C62B26E4E60F3 /* Pods-WeNovel.debug.xcconfig */,
+				59B4FDA3EDA69EF96291EF5C /* Pods-WeNovel.release.xcconfig */,
+				8DBD577C7BD11C412396CDEF /* Pods-WeNovelKit.debug.xcconfig */,
+				538D37371F337A6F6DBC8212 /* Pods-WeNovelKit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		6A48C2971EB2003E00ACE032 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A48C29E1EB2003E00ACE032 /* wenovelkit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		6AFCB14E1EB09488004F697D /* wenovel */ = {
+		6A48C2991EB2003E00ACE032 /* WeNovelKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AFCB1611EB09488004F697D /* Build configuration list for PBXNativeTarget "wenovel" */;
+			buildConfigurationList = 6A48C2A31EB2003E00ACE032 /* Build configuration list for PBXNativeTarget "WeNovelKit" */;
 			buildPhases = (
-				6AFCB14B1EB09488004F697D /* Sources */,
-				6AFCB14C1EB09488004F697D /* Frameworks */,
-				6AFCB14D1EB09488004F697D /* Resources */,
+				B99A5AE63D2C7E1A60DDE48C /* [CP] Check Pods Manifest.lock */,
+				6A48C2951EB2003E00ACE032 /* Sources */,
+				6A48C2961EB2003E00ACE032 /* Frameworks */,
+				6A48C2971EB2003E00ACE032 /* Headers */,
+				6A48C2981EB2003E00ACE032 /* Resources */,
+				6A48C2A71EB2006F00ACE032 /* Carthage */,
+				9ECAC3A77FB0CC5B069FB384 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = wenovel;
+			name = WeNovelKit;
+			productName = wenovelkit;
+			productReference = 6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6AFCB14E1EB09488004F697D /* WeNovel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AFCB1611EB09488004F697D /* Build configuration list for PBXNativeTarget "WeNovel" */;
+			buildPhases = (
+				3C803DFD83292C157FB1DE41 /* [CP] Check Pods Manifest.lock */,
+				6AFCB14B1EB09488004F697D /* Sources */,
+				6AFCB14C1EB09488004F697D /* Frameworks */,
+				6AFCB14D1EB09488004F697D /* Resources */,
+				6A48C2911EB1F64400ACE032 /* R.Swift */,
+				6A48C2A61EB2003E00ACE032 /* Embed Frameworks */,
+				BFEC44DCFC3C631436B8089F /* [CP] Embed Pods Frameworks */,
+				9E950C312F77D390DA969FA5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A48C2A01EB2003E00ACE032 /* PBXTargetDependency */,
+			);
+			name = WeNovel;
 			productName = wenovel;
-			productReference = 6AFCB14F1EB09488004F697D /* wenovel.app */;
+			productReference = 6AFCB14F1EB09488004F697D /* WeNovel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -94,10 +344,21 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Tbxark;
 				TargetAttributes = {
+					6A48C2991EB2003E00ACE032 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 858CBVXSWP;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
 					6AFCB14E1EB09488004F697D = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 858CBVXSWP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -114,49 +375,183 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AFCB14E1EB09488004F697D /* wenovel */,
+				6AFCB14E1EB09488004F697D /* WeNovel */,
+				6A48C2991EB2003E00ACE032 /* WeNovelKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6A48C2981EB2003E00ACE032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AFCB14D1EB09488004F697D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AFCB15D1EB09488004F697D /* LaunchScreen.storyboard in Resources */,
-				6AFCB15A1EB09488004F697D /* Assets.xcassets in Resources */,
-				6AFCB1581EB09488004F697D /* Main.storyboard in Resources */,
+				6A094B011EB0ABC30058EA6D /* LaunchScreen.storyboard in Resources */,
+				6A094B001EB0ABC30058EA6D /* Assets.xcassets in Resources */,
+				94F41FD9615A2854D3C8AA5E /* NovelCardCollectionViewCell.xib in Resources */,
+				94F419F23517BE219C3B90CC /* SendViewController.storyboard in Resources */,
+				94F41D12780FDDB8EC60517A /* DetailViewController.storyboard in Resources */,
+				94F41FCAC25301BDBCD28D1A /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C803DFD83292C157FB1DE41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6A48C2911EB1F64400ACE032 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/wenovel/General\"";
+		};
+		6A48C2A71EB2006F00ACE032 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CacheService.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NetworkService.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		9E950C312F77D390DA969FA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeNovel/Pods-WeNovel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ECAC3A77FB0CC5B069FB384 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeNovelKit/Pods-WeNovelKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B99A5AE63D2C7E1A60DDE48C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFEC44DCFC3C631436B8089F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeNovel/Pods-WeNovel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		6A48C2951EB2003E00ACE032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A48C2B11EB20E7400ACE032 /* WeNovelEntity.swift in Sources */,
+				6A48C2AE1EB2031E00ACE032 /* WeNovelNetWorking.swift in Sources */,
+				6A48C2AB1EB2016000ACE032 /* WeNovelService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AFCB14B1EB09488004F697D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AFCB1551EB09488004F697D /* ViewController.swift in Sources */,
-				6AFCB1531EB09488004F697D /* AppDelegate.swift in Sources */,
+				6A48C2931EB1F6CB00ACE032 /* R.generated.swift in Sources */,
+				6A094AFD1EB0ABC30058EA6D /* AppDelegate.swift in Sources */,
+				6A2CD4A51EB1AD150058B2A0 /* Layout.swift in Sources */,
+				94F4129E6919620D95D78C7E /* NovelCardCollectionViewCell.swift in Sources */,
+				94F41EB6E5439E38B46E01F9 /* SendViewController.swift in Sources */,
+				94F419BC95FD83B23B6A3425 /* DetailViewController.swift in Sources */,
+				94F41D9DB67C1CB8FEF9A853 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		6AFCB1561EB09488004F697D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6AFCB1571EB09488004F697D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		6A48C2A01EB2003E00ACE032 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A48C2991EB2003E00ACE032 /* WeNovelKit */;
+			targetProxy = 6A48C29F1EB2003E00ACE032 /* PBXContainerItemProxy */;
 		};
-		6AFCB15B1EB09488004F697D /* LaunchScreen.storyboard */ = {
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6A094AFB1EB0ABC30058EA6D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6AFCB15C1EB09488004F697D /* Base */,
+				6A094AFC1EB0ABC30058EA6D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -164,6 +559,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6A48C2A41EB2003E00ACE032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DBD577C7BD11C412396CDEF /* Pods-WeNovelKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = wenovelkit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.play.wenovelkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A48C2A51EB2003E00ACE032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 538D37371F337A6F6DBC8212 /* Pods-WeNovelKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = wenovelkit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.play.wenovelkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6AFCB15F1EB09488004F697D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -261,10 +715,18 @@
 		};
 		6AFCB1621EB09488004F697D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C30A4889094C62B26E4E60F3 /* Pods-WeNovel.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wenovel/wenovel.entitlements;
 				DEVELOPMENT_TEAM = 858CBVXSWP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = wenovel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.play.wenovel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,10 +736,18 @@
 		};
 		6AFCB1631EB09488004F697D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B4FDA3EDA69EF96291EF5C /* Pods-WeNovel.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wenovel/wenovel.entitlements;
 				DEVELOPMENT_TEAM = 858CBVXSWP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = wenovel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.play.wenovel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +758,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6A48C2A31EB2003E00ACE032 /* Build configuration list for PBXNativeTarget "WeNovelKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A48C2A41EB2003E00ACE032 /* Debug */,
+				6A48C2A51EB2003E00ACE032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6AFCB14A1EB09488004F697D /* Build configuration list for PBXProject "wenovel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -297,13 +776,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AFCB1611EB09488004F697D /* Build configuration list for PBXNativeTarget "wenovel" */ = {
+		6AFCB1611EB09488004F697D /* Build configuration list for PBXNativeTarget "WeNovel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AFCB1621EB09488004F697D /* Debug */,
 				6AFCB1631EB09488004F697D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
