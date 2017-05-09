@@ -33,4 +33,10 @@ extension R {
     struct Rect {
         static let `default` = CGRect(width: R.Width.screen, height: R.Height.screen - R.Height.fullNavigationBar)
     }
+    
+    struct Margin {
+        static let small: CGFloat = 8
+        static let medium: CGFloat = 10
+        static let large: CGFloat = 14
+    }
 }

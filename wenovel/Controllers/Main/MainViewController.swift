@@ -7,30 +7,46 @@
 //
 
 import UIKit
+import RxSwift
+import WeNovelKit
 import IBAnimatable
 
 class MainViewController: UIViewController {
+    private let disposeBag = DisposeBag()
+    private let actionButton = (refresh: UIButton(image: R.image.icon_refresh()),
+                                add: UIButton(image: R.image.icon_add()),
+                                user: UIButton(image: R.image.icon_user()))
     @IBOutlet weak var collectionView: UICollectionView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fd_prefersNavigationBarHidden = true
-        collectionView.register(R.nib.novelCardCollectionViewCell)
-        (collectionView.collectionViewLayout as? UICollectionViewFlowLayout )?.itemSize = CGSize.init(width: R.Width.screen - 40, height: 100)
+    @IBOutlet weak var actionToolbar: ActionToolbar! {
+        didSet {
+            actionToolbar?.setUpViews(margin: (30, 14),
+                                      items: [actionButton.refresh, actionButton.add, actionButton.user])
+        }
     }
-    @IBAction func addButtonDidCkick(_ sender: AnimatableButton) {
-//        sender.animate(AnimationType.pop(repeatCount: 1), duration: 0.2)
-//        performSegue(withIdentifier: "SendNewNovel", sender: self)
-        performSegue(withIdentifier: R.segue.mainViewController.sendNewNovel.identifier, sender: sender)
-    }
-    @IBAction func refreshButtonDidClick(_ sender: AnimatableButton) {
-        sender.animate(AnimationType.rotate(direction: AnimationType.RotationDirection.cw, repeatCount: 6), duration: 1)
-            .then(AnimationType.pop(repeatCount: 1), duration: 0.2)
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureWithObservable()
+    }
 
+    private func configureWithObservable() {
+        actionButton.add.rx.tap
+            .subscribe(onNext: {[weak self] _ in
+                   self?.performSegue(withIdentifier: R.segue.mainViewController.sendNewNovel.identifier, sender: nil)
+                })
+            .addDisposableTo(disposeBag)
+        
+        actionButton.user.rx.tap
+            .subscribe(onNext: { _ in
+                WNAuthManager.default.logout()
+            })
+            .addDisposableTo(disposeBag)
+        
+    }
 
 }
 
@@ -38,7 +54,7 @@ class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -46,9 +62,6 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.novelCardCollectionViewCell.identifier, for: indexPath) as! NovelCardCollectionViewCell
-        cell.textLabel.text = "从前有座山,山里有座庙, 庙里有个老和尚和小和讲故事, 在讲什么呢?"
-        cell.authLabel.text = "作者: TBXark 日期: 2017-12-20 共100个续集"
-        return cell
+        return collectionView.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: indexPath)
     }
 }

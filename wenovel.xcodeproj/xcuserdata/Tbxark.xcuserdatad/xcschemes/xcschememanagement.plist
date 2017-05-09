@@ -4,28 +4,48 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CacheService.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>NetworkService.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>WeNovel.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>0</integer>
 		</dict>
 		<key>WeNovelKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6A1D40A51EBC77F80031D199</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6A48C2991EB2003E00ACE032</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
+		</dict>
+		<key>6AB0311D1EC02FA9001D123D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 		<key>6AFCB14E1EB09488004F697D</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -8,37 +8,75 @@
 
 /* Begin PBXBuildFile section */
 		4D3F889954BAAD1259260030 /* Pods_WeNovelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F918AED3C95F5BB4DE2D78 /* Pods_WeNovelKit.framework */; };
+		685C0DE93A3559D41C40DAF6 /* Pods_NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E411C5EAA8E23CADD3F650 /* Pods_NetworkService.framework */; };
 		6A094AFD1EB0ABC30058EA6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A094AF41EB0ABC30058EA6D /* AppDelegate.swift */; };
 		6A094B001EB0ABC30058EA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A094AFA1EB0ABC30058EA6D /* Assets.xcassets */; };
 		6A094B011EB0ABC30058EA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A094AFB1EB0ABC30058EA6D /* LaunchScreen.storyboard */; };
+		6A1D40AA1EBC77F90031D199 /* NetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A1D40A81EBC77F90031D199 /* NetworkService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A1D40B61EBC780D0031D199 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D40B21EBC780D0031D199 /* HTTPStatusCode.swift */; };
+		6A1D40B71EBC780D0031D199 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D40B31EBC780D0031D199 /* NetworkClient.swift */; };
+		6A1D40B81EBC780D0031D199 /* RequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D40B41EBC780D0031D199 /* RequestEntity.swift */; };
+		6A1D40B91EBC780D0031D199 /* RxAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D40B51EBC780D0031D199 /* RxAlamofire.swift */; };
+		6A1D40BA1EBC7D2A0031D199 /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1D40A61EBC77F80031D199 /* NetworkService.framework */; };
+		6A1D40BB1EBC7D2A0031D199 /* NetworkService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1D40A61EBC77F80031D199 /* NetworkService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A2CD4A51EB1AD150058B2A0 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2CD4A41EB1AD150058B2A0 /* Layout.swift */; };
 		6A48C2931EB1F6CB00ACE032 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2921EB1F6CB00ACE032 /* R.generated.swift */; };
 		6A48C29E1EB2003E00ACE032 /* wenovelkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A48C29C1EB2003E00ACE032 /* wenovelkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A48C2A11EB2003E00ACE032 /* WeNovelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */; };
 		6A48C2A21EB2003E00ACE032 /* WeNovelKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6A48C2A81EB200BA00ACE032 /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A15CF551EB0A75400EC0903 /* NetworkService.framework */; };
-		6A48C2A91EB200BA00ACE032 /* CacheService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A15CF531EB0A75400EC0903 /* CacheService.framework */; };
-		6A48C2AB1EB2016000ACE032 /* WeNovelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2AA1EB2016000ACE032 /* WeNovelService.swift */; };
-		6A48C2AE1EB2031E00ACE032 /* WeNovelNetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2AD1EB2031E00ACE032 /* WeNovelNetWorking.swift */; };
-		6A48C2B11EB20E7400ACE032 /* WeNovelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48C2AF1EB20DA500ACE032 /* WeNovelEntity.swift */; };
+		6A48EA211EC1BC6700ACA7D0 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48EA201EC1BC6700ACA7D0 /* Signal.swift */; };
+		6AB031221EC02FA9001D123D /* cacheservice.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AB031201EC02FA9001D123D /* cacheservice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AB031251EC02FA9001D123D /* CacheService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB0311E1EC02FA9001D123D /* CacheService.framework */; };
+		6AB031261EC02FA9001D123D /* CacheService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB0311E1EC02FA9001D123D /* CacheService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6AB0312C1EC02FC8001D123D /* CacheClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0312A1EC02FC4001D123D /* CacheClient.swift */; };
+		6AB031321EC07BFA001D123D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB031311EC07BFA001D123D /* LoginViewController.swift */; };
+		6AB031341EC07C04001D123D /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB031331EC07C04001D123D /* LoginViewController.storyboard */; };
+		6AB031361EC07D14001D123D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB031351EC07D14001D123D /* LoginViewModel.swift */; };
+		6AB031391EC0837D001D123D /* Foudation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB031381EC0837D001D123D /* Foudation+Extension.swift */; };
+		6AB0313B1EC0888A001D123D /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0313A1EC0888A001D123D /* ValidationService.swift */; };
+		6AB0313D1EC1A6EF001D123D /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0313C1EC1A6EF001D123D /* MobileLoginViewController.swift */; };
+		6AB0313F1EC1B0C8001D123D /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0313E1EC1B0C8001D123D /* UIKit+Extension.swift */; };
+		6AD2000F1EC1C32A00920A15 /* ActionToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2000E1EC1C32A00920A15 /* ActionToolbar.swift */; };
+		6AD200111EC1C3E500920A15 /* NovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD200101EC1C3E500920A15 /* NovelCollectionViewCell.swift */; };
+		6AE7E8411EC1DCDF00CCDA1C /* SendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7E8401EC1DCDF00CCDA1C /* SendViewModel.swift */; };
+		6AE7E8431EC1DDC600CCDA1C /* SendNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7E8421EC1DDC600CCDA1C /* SendNodeViewController.swift */; };
+		6AE7E8471EC1DFD500CCDA1C /* SendNodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE7E8461EC1DFD500CCDA1C /* SendNodeViewController.storyboard */; };
 		744A4D5B910C7F2CABEA4A80 /* Pods_WeNovel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70A7D84944491E1C0871FA7 /* Pods_WeNovel.framework */; };
-		94F4129E6919620D95D78C7E /* NovelCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41D8B71DB19B6DEB5BAE0 /* NovelCardCollectionViewCell.swift */; };
+		89C7BAC127BBE7786B643720 /* Pods_CacheService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F199ED3307ABBAA779424264 /* Pods_CacheService.framework */; };
+		94F41242888DAB7E1DBB880A /* WNNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F418CD6AD40710396F70CB /* WNNetworking.swift */; };
+		94F415C2A1FA51FD5852C04A /* WNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41896A032BC306E6D7337 /* WNService.swift */; };
+		94F417AD43BCE6241CF27BB2 /* WNResponeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41834F6E96B21F4BD2798 /* WNResponeEntity.swift */; };
+		94F418281AD594EAA9F4A1F8 /* WNAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41D97A4EFA2F714BE3DC5 /* WNAuthManager.swift */; };
 		94F419BC95FD83B23B6A3425 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F411D31620B4FCFBACC4FC /* DetailViewController.swift */; };
-		94F419F23517BE219C3B90CC /* SendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F4104B63722770E7FEBE93 /* SendViewController.storyboard */; };
+		94F419F23517BE219C3B90CC /* SendStartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F4104B63722770E7FEBE93 /* SendStartViewController.storyboard */; };
 		94F41D12780FDDB8EC60517A /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F4198D4F888908099BFA96 /* DetailViewController.storyboard */; };
 		94F41D9DB67C1CB8FEF9A853 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41850A73E9878BAD14A88 /* MainViewController.swift */; };
-		94F41EB6E5439E38B46E01F9 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41A56647743FF0FEC561C /* SendViewController.swift */; };
+		94F41E7F561107C5585A14AB /* WNRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41C085C95846724BCC98E /* WNRequestEntity.swift */; };
+		94F41EB6E5439E38B46E01F9 /* SendStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41A56647743FF0FEC561C /* SendStartViewController.swift */; };
 		94F41FCAC25301BDBCD28D1A /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F412DE99319F65E1C4A085 /* MainViewController.storyboard */; };
-		94F41FD9615A2854D3C8AA5E /* NovelCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F4165FFB7BF7C146654109 /* NovelCardCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6A1D40BC1EBC7D2A0031D199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AFCB1471EB09488004F697D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A1D40A51EBC77F80031D199;
+			remoteInfo = NetworkService;
+		};
 		6A48C29F1EB2003E00ACE032 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6AFCB1471EB09488004F697D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6A48C2991EB2003E00ACE032;
 			remoteInfo = wenovelkit;
+		};
+		6AB031231EC02FA9001D123D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AFCB1471EB09488004F697D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AB0311D1EC02FA9001D123D;
+			remoteInfo = cacheservice;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,6 +88,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6A48C2A21EB2003E00ACE032 /* WeNovelKit.framework in Embed Frameworks */,
+				6A1D40BB1EBC7D2A0031D199 /* NetworkService.framework in Embed Frameworks */,
+				6AB031261EC02FA9001D123D /* CacheService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,8 +98,11 @@
 
 /* Begin PBXFileReference section */
 		16F918AED3C95F5BB4DE2D78 /* Pods_WeNovelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeNovelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B425DCE039276BBCC8FB487 /* Pods-NetworkService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkService/Pods-NetworkService.debug.xcconfig"; sourceTree = "<group>"; };
 		538D37371F337A6F6DBC8212 /* Pods-WeNovelKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovelKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovelKit/Pods-WeNovelKit.release.xcconfig"; sourceTree = "<group>"; };
+		58EF9316D285EA2257C4209F /* Pods-CacheService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacheService.release.xcconfig"; path = "Pods/Target Support Files/Pods-CacheService/Pods-CacheService.release.xcconfig"; sourceTree = "<group>"; };
 		59B4FDA3EDA69EF96291EF5C /* Pods-WeNovel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovel.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovel/Pods-WeNovel.release.xcconfig"; sourceTree = "<group>"; };
+		67E411C5EAA8E23CADD3F650 /* Pods_NetworkService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A094AF41EB0ABC30058EA6D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A094AFA1EB0ABC30058EA6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A094AFC1EB0ABC30058EA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +115,13 @@
 		6A15CF581EB0A75400EC0903 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		6A15CF591EB0A75400EC0903 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		6A15CF5A1EB0A75400EC0903 /* YYCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYCache.framework; path = Carthage/Build/iOS/YYCache.framework; sourceTree = "<group>"; };
+		6A1D40A61EBC77F80031D199 /* NetworkService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1D40A81EBC77F90031D199 /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		6A1D40A91EBC77F90031D199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A1D40B21EBC780D0031D199 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		6A1D40B31EBC780D0031D199 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		6A1D40B41EBC780D0031D199 /* RequestEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEntity.swift; sourceTree = "<group>"; };
+		6A1D40B51EBC780D0031D199 /* RxAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxAlamofire.swift; sourceTree = "<group>"; };
 		6A2CD4A41EB1AD150058B2A0 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		6A48C2831EB1EB7300ACE032 /* YYText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYText.framework; path = Carthage/Build/iOS/YYText.framework; sourceTree = "<group>"; };
 		6A48C2851EB1EB8400ACE032 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Carthage/Build/iOS/OneSignal.framework; sourceTree = "<group>"; };
@@ -81,33 +131,67 @@
 		6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeNovelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A48C29C1EB2003E00ACE032 /* wenovelkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wenovelkit.h; sourceTree = "<group>"; };
 		6A48C29D1EB2003E00ACE032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A48C2AA1EB2016000ACE032 /* WeNovelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeNovelService.swift; sourceTree = "<group>"; };
 		6A48C2AC1EB2023D00ACE032 /* wenovel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = wenovel.entitlements; path = ../wenovel.entitlements; sourceTree = "<group>"; };
-		6A48C2AD1EB2031E00ACE032 /* WeNovelNetWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeNovelNetWorking.swift; sourceTree = "<group>"; };
-		6A48C2AF1EB20DA500ACE032 /* WeNovelEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeNovelEntity.swift; sourceTree = "<group>"; };
+		6A48EA201EC1BC6700ACA7D0 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		6AB0311E1EC02FA9001D123D /* CacheService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB031201EC02FA9001D123D /* cacheservice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cacheservice.h; sourceTree = "<group>"; };
+		6AB031211EC02FA9001D123D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AB0312A1EC02FC4001D123D /* CacheClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheClient.swift; sourceTree = "<group>"; };
+		6AB031311EC07BFA001D123D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6AB031331EC07C04001D123D /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		6AB031351EC07D14001D123D /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6AB031381EC0837D001D123D /* Foudation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foudation+Extension.swift"; sourceTree = "<group>"; };
+		6AB0313A1EC0888A001D123D /* ValidationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		6AB0313C1EC1A6EF001D123D /* MobileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
+		6AB0313E1EC1B0C8001D123D /* UIKit+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
+		6AD2000E1EC1C32A00920A15 /* ActionToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionToolbar.swift; sourceTree = "<group>"; };
+		6AD200101EC1C3E500920A15 /* NovelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AE7E8401EC1DCDF00CCDA1C /* SendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewModel.swift; sourceTree = "<group>"; };
+		6AE7E8421EC1DDC600CCDA1C /* SendNodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNodeViewController.swift; sourceTree = "<group>"; };
+		6AE7E8461EC1DFD500CCDA1C /* SendNodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SendNodeViewController.storyboard; sourceTree = "<group>"; };
 		6AFCB14F1EB09488004F697D /* WeNovel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeNovel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AFCB15E1EB09488004F697D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = wenovel/Info.plist; sourceTree = "<group>"; };
+		6AFCB15E1EB09488004F697D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBD577C7BD11C412396CDEF /* Pods-WeNovelKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovelKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovelKit/Pods-WeNovelKit.debug.xcconfig"; sourceTree = "<group>"; };
-		94F4104B63722770E7FEBE93 /* SendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendViewController.storyboard; sourceTree = "<group>"; };
+		8DE3ADCCE97DE44F766A93F7 /* Pods-NetworkService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkService.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkService/Pods-NetworkService.release.xcconfig"; sourceTree = "<group>"; };
+		94F4104B63722770E7FEBE93 /* SendStartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendStartViewController.storyboard; sourceTree = "<group>"; };
 		94F411D31620B4FCFBACC4FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		94F412DE99319F65E1C4A085 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
-		94F4165FFB7BF7C146654109 /* NovelCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NovelCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		94F41834F6E96B21F4BD2798 /* WNResponeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNResponeEntity.swift; sourceTree = "<group>"; };
 		94F41850A73E9878BAD14A88 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		94F41896A032BC306E6D7337 /* WNService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNService.swift; sourceTree = "<group>"; };
+		94F418CD6AD40710396F70CB /* WNNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNNetworking.swift; sourceTree = "<group>"; };
 		94F4198D4F888908099BFA96 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
-		94F41A56647743FF0FEC561C /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
-		94F41D8B71DB19B6DEB5BAE0 /* NovelCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		94F41A56647743FF0FEC561C /* SendStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendStartViewController.swift; sourceTree = "<group>"; };
+		94F41C085C95846724BCC98E /* WNRequestEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNRequestEntity.swift; sourceTree = "<group>"; };
+		94F41D97A4EFA2F714BE3DC5 /* WNAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNAuthManager.swift; sourceTree = "<group>"; };
+		A76BF512A6AB0E70640A36BC /* Pods-CacheService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacheService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CacheService/Pods-CacheService.debug.xcconfig"; sourceTree = "<group>"; };
 		C30A4889094C62B26E4E60F3 /* Pods-WeNovel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeNovel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeNovel/Pods-WeNovel.debug.xcconfig"; sourceTree = "<group>"; };
 		E70A7D84944491E1C0871FA7 /* Pods_WeNovel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeNovel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F199ED3307ABBAA779424264 /* Pods_CacheService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CacheService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6A1D40A21EBC77F80031D199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				685C0DE93A3559D41C40DAF6 /* Pods_NetworkService.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6A48C2961EB2003E00ACE032 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A48C2A81EB200BA00ACE032 /* NetworkService.framework in Frameworks */,
-				6A48C2A91EB200BA00ACE032 /* CacheService.framework in Frameworks */,
 				4D3F889954BAAD1259260030 /* Pods_WeNovelKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB0311A1EC02FA9001D123D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C7BAC127BBE7786B643720 /* Pods_CacheService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +199,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1D40BA1EBC7D2A0031D199 /* NetworkService.framework in Frameworks */,
 				6A48C2A11EB2003E00ACE032 /* WeNovelKit.framework in Frameworks */,
 				744A4D5B910C7F2CABEA4A80 /* Pods_WeNovel.framework in Frameworks */,
+				6AB031251EC02FA9001D123D /* CacheService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +220,7 @@
 		6A094AF51EB0ABC30058EA6D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A1D40BE1EBC80680031D199 /* Login */,
 				94F41CE97B3DC489032601FF /* Send */,
 				94F418D2D53AFF2D65339E2B /* Detail */,
 				94F41BE7650E87BBC7F3BE72 /* Main */,
@@ -169,8 +256,34 @@
 				6A15CF5A1EB0A75400EC0903 /* YYCache.framework */,
 				E70A7D84944491E1C0871FA7 /* Pods_WeNovel.framework */,
 				16F918AED3C95F5BB4DE2D78 /* Pods_WeNovelKit.framework */,
+				67E411C5EAA8E23CADD3F650 /* Pods_NetworkService.framework */,
+				F199ED3307ABBAA779424264 /* Pods_CacheService.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A1D40A71EBC77F90031D199 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				6A1D40B21EBC780D0031D199 /* HTTPStatusCode.swift */,
+				6A1D40B31EBC780D0031D199 /* NetworkClient.swift */,
+				6A1D40B41EBC780D0031D199 /* RequestEntity.swift */,
+				6A1D40B51EBC780D0031D199 /* RxAlamofire.swift */,
+				6A1D40A81EBC77F90031D199 /* NetworkService.h */,
+				6A1D40A91EBC77F90031D199 /* Info.plist */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		6A1D40BE1EBC80680031D199 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6AB031331EC07C04001D123D /* LoginViewController.storyboard */,
+				6AB031351EC07D14001D123D /* LoginViewModel.swift */,
+				6AB031311EC07BFA001D123D /* LoginViewController.swift */,
+				6AB0313C1EC1A6EF001D123D /* MobileLoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		6A2CD4A31EB1ACF70058B2A0 /* General */ = {
@@ -178,6 +291,10 @@
 			children = (
 				6A48C2921EB1F6CB00ACE032 /* R.generated.swift */,
 				6A2CD4A41EB1AD150058B2A0 /* Layout.swift */,
+				6AB031381EC0837D001D123D /* Foudation+Extension.swift */,
+				6AB0313E1EC1B0C8001D123D /* UIKit+Extension.swift */,
+				6A48EA201EC1BC6700ACA7D0 /* Signal.swift */,
+				6AB0313A1EC0888A001D123D /* ValidationService.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -185,22 +302,32 @@
 		6A48C29B1EB2003E00ACE032 /* WeNovelKit */ = {
 			isa = PBXGroup;
 			children = (
-				6A48C29C1EB2003E00ACE032 /* wenovelkit.h */,
 				6A48C29D1EB2003E00ACE032 /* Info.plist */,
-				6A48C2AA1EB2016000ACE032 /* WeNovelService.swift */,
-				6A48C2AD1EB2031E00ACE032 /* WeNovelNetWorking.swift */,
-				6A48C2AF1EB20DA500ACE032 /* WeNovelEntity.swift */,
+				6A48C29C1EB2003E00ACE032 /* wenovelkit.h */,
+				94F41465893F21823BC67AE6 /* Networking */,
 			);
 			name = WeNovelKit;
 			path = wenovelkit;
+			sourceTree = "<group>";
+		};
+		6AB0311F1EC02FA9001D123D /* CacheService */ = {
+			isa = PBXGroup;
+			children = (
+				6AB0312A1EC02FC4001D123D /* CacheClient.swift */,
+				6AB031201EC02FA9001D123D /* cacheservice.h */,
+				6AB031211EC02FA9001D123D /* Info.plist */,
+			);
+			name = CacheService;
+			path = cacheservice;
 			sourceTree = "<group>";
 		};
 		6AFCB1461EB09488004F697D = {
 			isa = PBXGroup;
 			children = (
 				6AFCB1511EB09488004F697D /* WeNovel */,
-				6AFCB15E1EB09488004F697D /* Info.plist */,
 				6A48C29B1EB2003E00ACE032 /* WeNovelKit */,
+				6A1D40A71EBC77F90031D199 /* NetworkService */,
+				6AB0311F1EC02FA9001D123D /* CacheService */,
 				6AFCB1501EB09488004F697D /* Products */,
 				6A15CF511EB0A75300EC0903 /* Frameworks */,
 				FB94DC74C487A2BDBD5ABA5F /* Pods */,
@@ -212,6 +339,8 @@
 			children = (
 				6AFCB14F1EB09488004F697D /* WeNovel.app */,
 				6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */,
+				6A1D40A61EBC77F80031D199 /* NetworkService.framework */,
+				6AB0311E1EC02FA9001D123D /* CacheService.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,9 +353,22 @@
 				6A094AF51EB0ABC30058EA6D /* Controllers */,
 				6A094AF91EB0ABC30058EA6D /* Resource */,
 				94F41997DD22FCC004A38E5D /* Views */,
+				6AFCB15E1EB09488004F697D /* Info.plist */,
 			);
 			name = WeNovel;
 			path = wenovel;
+			sourceTree = "<group>";
+		};
+		94F41465893F21823BC67AE6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				94F418CD6AD40710396F70CB /* WNNetworking.swift */,
+				94F41D97A4EFA2F714BE3DC5 /* WNAuthManager.swift */,
+				94F41C085C95846724BCC98E /* WNRequestEntity.swift */,
+				94F41834F6E96B21F4BD2798 /* WNResponeEntity.swift */,
+				94F41896A032BC306E6D7337 /* WNService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		94F418D2D53AFF2D65339E2B /* Detail */ = {
@@ -241,8 +383,8 @@
 		94F41997DD22FCC004A38E5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				94F41D8B71DB19B6DEB5BAE0 /* NovelCardCollectionViewCell.swift */,
-				94F4165FFB7BF7C146654109 /* NovelCardCollectionViewCell.xib */,
+				6AD200101EC1C3E500920A15 /* NovelCollectionViewCell.swift */,
+				6AD2000E1EC1C32A00920A15 /* ActionToolbar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,8 +401,11 @@
 		94F41CE97B3DC489032601FF /* Send */ = {
 			isa = PBXGroup;
 			children = (
-				94F4104B63722770E7FEBE93 /* SendViewController.storyboard */,
-				94F41A56647743FF0FEC561C /* SendViewController.swift */,
+				94F4104B63722770E7FEBE93 /* SendStartViewController.storyboard */,
+				6AE7E8461EC1DFD500CCDA1C /* SendNodeViewController.storyboard */,
+				6AE7E8401EC1DCDF00CCDA1C /* SendViewModel.swift */,
+				94F41A56647743FF0FEC561C /* SendStartViewController.swift */,
+				6AE7E8421EC1DDC600CCDA1C /* SendNodeViewController.swift */,
 			);
 			path = Send;
 			sourceTree = "<group>";
@@ -272,6 +417,10 @@
 				59B4FDA3EDA69EF96291EF5C /* Pods-WeNovel.release.xcconfig */,
 				8DBD577C7BD11C412396CDEF /* Pods-WeNovelKit.debug.xcconfig */,
 				538D37371F337A6F6DBC8212 /* Pods-WeNovelKit.release.xcconfig */,
+				3B425DCE039276BBCC8FB487 /* Pods-NetworkService.debug.xcconfig */,
+				8DE3ADCCE97DE44F766A93F7 /* Pods-NetworkService.release.xcconfig */,
+				A76BF512A6AB0E70640A36BC /* Pods-CacheService.debug.xcconfig */,
+				58EF9316D285EA2257C4209F /* Pods-CacheService.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -279,6 +428,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6A1D40A31EBC77F80031D199 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A1D40AA1EBC77F90031D199 /* NetworkService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6A48C2971EB2003E00ACE032 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,9 +444,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AB0311B1EC02FA9001D123D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB031221EC02FA9001D123D /* cacheservice.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6A1D40A51EBC77F80031D199 /* NetworkService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A1D40AF1EBC77F90031D199 /* Build configuration list for PBXNativeTarget "NetworkService" */;
+			buildPhases = (
+				57D53F65DFEFFC2786FAA875 /* [CP] Check Pods Manifest.lock */,
+				6A1D40A11EBC77F80031D199 /* Sources */,
+				6A1D40A21EBC77F80031D199 /* Frameworks */,
+				6A1D40A31EBC77F80031D199 /* Headers */,
+				6A1D40A41EBC77F80031D199 /* Resources */,
+				A92D24C1B05E4573A183EA34 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkService;
+			productName = NetworkService;
+			productReference = 6A1D40A61EBC77F80031D199 /* NetworkService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		6A48C2991EB2003E00ACE032 /* WeNovelKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A48C2A31EB2003E00ACE032 /* Build configuration list for PBXNativeTarget "WeNovelKit" */;
@@ -299,7 +484,6 @@
 				6A48C2961EB2003E00ACE032 /* Frameworks */,
 				6A48C2971EB2003E00ACE032 /* Headers */,
 				6A48C2981EB2003E00ACE032 /* Resources */,
-				6A48C2A71EB2006F00ACE032 /* Carthage */,
 				9ECAC3A77FB0CC5B069FB384 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -311,15 +495,35 @@
 			productReference = 6A48C29A1EB2003E00ACE032 /* WeNovelKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6AB0311D1EC02FA9001D123D /* CacheService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AB031291EC02FA9001D123D /* Build configuration list for PBXNativeTarget "CacheService" */;
+			buildPhases = (
+				30F5B80858E1DDA3AED5128F /* [CP] Check Pods Manifest.lock */,
+				6AB031191EC02FA9001D123D /* Sources */,
+				6AB0311A1EC02FA9001D123D /* Frameworks */,
+				6AB0311B1EC02FA9001D123D /* Headers */,
+				6AB0311C1EC02FA9001D123D /* Resources */,
+				B1A15B395071A042A1539FBC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CacheService;
+			productName = cacheservice;
+			productReference = 6AB0311E1EC02FA9001D123D /* CacheService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		6AFCB14E1EB09488004F697D /* WeNovel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AFCB1611EB09488004F697D /* Build configuration list for PBXNativeTarget "WeNovel" */;
 			buildPhases = (
+				6A48C2911EB1F64400ACE032 /* R.Swift */,
 				3C803DFD83292C157FB1DE41 /* [CP] Check Pods Manifest.lock */,
 				6AFCB14B1EB09488004F697D /* Sources */,
 				6AFCB14C1EB09488004F697D /* Frameworks */,
 				6AFCB14D1EB09488004F697D /* Resources */,
-				6A48C2911EB1F64400ACE032 /* R.Swift */,
 				6A48C2A61EB2003E00ACE032 /* Embed Frameworks */,
 				BFEC44DCFC3C631436B8089F /* [CP] Embed Pods Frameworks */,
 				9E950C312F77D390DA969FA5 /* [CP] Copy Pods Resources */,
@@ -328,6 +532,8 @@
 			);
 			dependencies = (
 				6A48C2A01EB2003E00ACE032 /* PBXTargetDependency */,
+				6A1D40BD1EBC7D2A0031D199 /* PBXTargetDependency */,
+				6AB031241EC02FA9001D123D /* PBXTargetDependency */,
 			);
 			name = WeNovel;
 			productName = wenovel;
@@ -344,10 +550,21 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Tbxark;
 				TargetAttributes = {
+					6A1D40A51EBC77F80031D199 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 858CBVXSWP;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
 					6A48C2991EB2003E00ACE032 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 858CBVXSWP;
 						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					6AB0311D1EC02FA9001D123D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 858CBVXSWP;
 						ProvisioningStyle = Automatic;
 					};
 					6AFCB14E1EB09488004F697D = {
@@ -355,6 +572,9 @@
 						DevelopmentTeam = 858CBVXSWP;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -377,12 +597,28 @@
 			targets = (
 				6AFCB14E1EB09488004F697D /* WeNovel */,
 				6A48C2991EB2003E00ACE032 /* WeNovelKit */,
+				6A1D40A51EBC77F80031D199 /* NetworkService */,
+				6AB0311D1EC02FA9001D123D /* CacheService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6A1D40A41EBC77F80031D199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6A48C2981EB2003E00ACE032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB0311C1EC02FA9001D123D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,11 +629,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AE7E8471EC1DFD500CCDA1C /* SendNodeViewController.storyboard in Resources */,
 				6A094B011EB0ABC30058EA6D /* LaunchScreen.storyboard in Resources */,
 				6A094B001EB0ABC30058EA6D /* Assets.xcassets in Resources */,
-				94F41FD9615A2854D3C8AA5E /* NovelCardCollectionViewCell.xib in Resources */,
-				94F419F23517BE219C3B90CC /* SendViewController.storyboard in Resources */,
+				94F419F23517BE219C3B90CC /* SendStartViewController.storyboard in Resources */,
 				94F41D12780FDDB8EC60517A /* DetailViewController.storyboard in Resources */,
+				6AB031341EC07C04001D123D /* LoginViewController.storyboard in Resources */,
 				94F41FCAC25301BDBCD28D1A /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +642,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		30F5B80858E1DDA3AED5128F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		3C803DFD83292C157FB1DE41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57D53F65DFEFFC2786FAA875 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -433,22 +700,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/wenovel/General\"";
-		};
-		6A48C2A71EB2006F00ACE032 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CacheService.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/NetworkService.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		9E950C312F77D390DA969FA5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -478,6 +729,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeNovelKit/Pods-WeNovelKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92D24C1B05E4573A183EA34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkService/Pods-NetworkService-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A15B395071A042A1539FBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CacheService/Pods-CacheService-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B99A5AE63D2C7E1A60DDE48C /* [CP] Check Pods Manifest.lock */ = {
@@ -513,13 +794,34 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6A1D40A11EBC77F80031D199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A1D40B61EBC780D0031D199 /* HTTPStatusCode.swift in Sources */,
+				6A1D40B81EBC780D0031D199 /* RequestEntity.swift in Sources */,
+				6A1D40B91EBC780D0031D199 /* RxAlamofire.swift in Sources */,
+				6A1D40B71EBC780D0031D199 /* NetworkClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6A48C2951EB2003E00ACE032 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A48C2B11EB20E7400ACE032 /* WeNovelEntity.swift in Sources */,
-				6A48C2AE1EB2031E00ACE032 /* WeNovelNetWorking.swift in Sources */,
-				6A48C2AB1EB2016000ACE032 /* WeNovelService.swift in Sources */,
+				94F41242888DAB7E1DBB880A /* WNNetworking.swift in Sources */,
+				94F418281AD594EAA9F4A1F8 /* WNAuthManager.swift in Sources */,
+				94F41E7F561107C5585A14AB /* WNRequestEntity.swift in Sources */,
+				94F417AD43BCE6241CF27BB2 /* WNResponeEntity.swift in Sources */,
+				94F415C2A1FA51FD5852C04A /* WNService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB031191EC02FA9001D123D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB0312C1EC02FC8001D123D /* CacheClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,22 +830,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A48C2931EB1F6CB00ACE032 /* R.generated.swift in Sources */,
+				6A48EA211EC1BC6700ACA7D0 /* Signal.swift in Sources */,
+				6AE7E8431EC1DDC600CCDA1C /* SendNodeViewController.swift in Sources */,
 				6A094AFD1EB0ABC30058EA6D /* AppDelegate.swift in Sources */,
 				6A2CD4A51EB1AD150058B2A0 /* Layout.swift in Sources */,
-				94F4129E6919620D95D78C7E /* NovelCardCollectionViewCell.swift in Sources */,
-				94F41EB6E5439E38B46E01F9 /* SendViewController.swift in Sources */,
+				6AE7E8411EC1DCDF00CCDA1C /* SendViewModel.swift in Sources */,
+				6AD200111EC1C3E500920A15 /* NovelCollectionViewCell.swift in Sources */,
+				6AD2000F1EC1C32A00920A15 /* ActionToolbar.swift in Sources */,
+				6AB031321EC07BFA001D123D /* LoginViewController.swift in Sources */,
+				6AB031391EC0837D001D123D /* Foudation+Extension.swift in Sources */,
+				6AB0313F1EC1B0C8001D123D /* UIKit+Extension.swift in Sources */,
+				6AB0313D1EC1A6EF001D123D /* MobileLoginViewController.swift in Sources */,
+				94F41EB6E5439E38B46E01F9 /* SendStartViewController.swift in Sources */,
+				6AB0313B1EC0888A001D123D /* ValidationService.swift in Sources */,
 				94F419BC95FD83B23B6A3425 /* DetailViewController.swift in Sources */,
 				94F41D9DB67C1CB8FEF9A853 /* MainViewController.swift in Sources */,
+				6AB031361EC07D14001D123D /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6A1D40BD1EBC7D2A0031D199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A1D40A51EBC77F80031D199 /* NetworkService */;
+			targetProxy = 6A1D40BC1EBC7D2A0031D199 /* PBXContainerItemProxy */;
+		};
 		6A48C2A01EB2003E00ACE032 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6A48C2991EB2003E00ACE032 /* WeNovelKit */;
 			targetProxy = 6A48C29F1EB2003E00ACE032 /* PBXContainerItemProxy */;
+		};
+		6AB031241EC02FA9001D123D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AB0311D1EC02FA9001D123D /* CacheService */;
+			targetProxy = 6AB031231EC02FA9001D123D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -559,6 +881,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6A1D40B01EBC77F90031D199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B425DCE039276BBCC8FB487 /* Pods-NetworkService.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkService/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.play.NetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A1D40B11EBC77F90031D199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DE3ADCCE97DE44F766A93F7 /* Pods-NetworkService.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkService/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.play.NetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6A48C2A41EB2003E00ACE032 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DBD577C7BD11C412396CDEF /* Pods-WeNovelKit.debug.xcconfig */;
@@ -610,6 +983,54 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.play.wenovelkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6AB031271EC02FA9001D123D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A76BF512A6AB0E70640A36BC /* Pods-CacheService.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = cacheservice/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.play.cacheservice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6AB031281EC02FA9001D123D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58EF9316D285EA2257C4209F /* Pods-CacheService.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = cacheservice/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.play.cacheservice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -726,7 +1147,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = wenovel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.play.wenovel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -747,7 +1168,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = wenovel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.play.wenovel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -758,11 +1179,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6A1D40AF1EBC77F90031D199 /* Build configuration list for PBXNativeTarget "NetworkService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A1D40B01EBC77F90031D199 /* Debug */,
+				6A1D40B11EBC77F90031D199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6A48C2A31EB2003E00ACE032 /* Build configuration list for PBXNativeTarget "WeNovelKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A48C2A41EB2003E00ACE032 /* Debug */,
 				6A48C2A51EB2003E00ACE032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AB031291EC02FA9001D123D /* Build configuration list for PBXNativeTarget "CacheService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AB031271EC02FA9001D123D /* Debug */,
+				6AB031281EC02FA9001D123D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

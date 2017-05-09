@@ -31,32 +31,94 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 41 images.
   struct image {
-    /// Image `btn_add`.
-    static let btn_add = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_add")
-    /// Image `btn_radom`.
-    static let btn_radom = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_radom")
-    /// Image `btn_send`.
-    static let btn_send = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_send")
+    /// Image `btn_gray_round_border_bg`.
+    static let btn_gray_round_border_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_gray_round_border_bg")
     /// Image `control_mask_view`.
     static let control_mask_view = Rswift.ImageResource(bundle: R.hostingBundle, name: "control_mask_view")
+    /// Image `icon_add`.
+    static let icon_add = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_add")
+    /// Image `icon_arrow_down`.
+    static let icon_arrow_down = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_down")
+    /// Image `icon_arrow_left`.
+    static let icon_arrow_left = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_left")
+    /// Image `icon_arrow_right`.
+    static let icon_arrow_right = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_right")
+    /// Image `icon_arrow_up`.
+    static let icon_arrow_up = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_up")
+    /// Image `icon_calendar`.
+    static let icon_calendar = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_calendar")
+    /// Image `icon_close`.
+    static let icon_close = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_close")
+    /// Image `icon_commit`.
+    static let icon_commit = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_commit")
+    /// Image `icon_delete`.
+    static let icon_delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_delete")
+    /// Image `icon_downlooad`.
+    static let icon_downlooad = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_downlooad")
+    /// Image `icon_edit`.
+    static let icon_edit = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_edit")
+    /// Image `icon_facebook`.
+    static let icon_facebook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_facebook")
+    /// Image `icon_file`.
+    static let icon_file = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_file")
+    /// Image `icon_filter`.
+    static let icon_filter = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_filter")
+    /// Image `icon_folder`.
+    static let icon_folder = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_folder")
+    /// Image `icon_full_screen`.
+    static let icon_full_screen = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_full_screen")
+    /// Image `icon_link`.
+    static let icon_link = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_link")
+    /// Image `icon_lock`.
+    static let icon_lock = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_lock")
+    /// Image `icon_logout`.
+    static let icon_logout = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_logout")
+    /// Image `icon_message`.
+    static let icon_message = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_message")
+    /// Image `icon_more`.
+    static let icon_more = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_more")
+    /// Image `icon_printer`.
+    static let icon_printer = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_printer")
+    /// Image `icon_refresh`.
+    static let icon_refresh = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_refresh")
+    /// Image `icon_resize_ horizontal`.
+    static let icon_resize_Horizontal = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_resize_ horizontal")
+    /// Image `icon_resize_vertical`.
+    static let icon_resize_vertical = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_resize_vertical")
+    /// Image `icon_search`.
+    static let icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_search")
+    /// Image `icon_setting`.
+    static let icon_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_setting")
+    /// Image `icon_share`.
+    static let icon_share = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_share")
+    /// Image `icon_to`.
+    static let icon_to = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_to")
+    /// Image `icon_user`.
+    static let icon_user = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_user")
+    /// Image `login_btn_facebook_bg`.
+    static let login_btn_facebook_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "login_btn_facebook_bg")
+    /// Image `login_btn_phone_bg`.
+    static let login_btn_phone_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "login_btn_phone_bg")
+    /// Image `login_btn_weibo_bg`.
+    static let login_btn_weibo_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "login_btn_weibo_bg")
+    /// Image `login_logo`.
+    static let login_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "login_logo")
     /// Image `novel_gray_bg`.
     static let novel_gray_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "novel_gray_bg")
+    /// Image `resize_button`.
+    static let resize_button = Rswift.ImageResource(bundle: R.hostingBundle, name: "resize_button")
+    /// Image `text_avatar`.
+    static let text_avatar = Rswift.ImageResource(bundle: R.hostingBundle, name: "text_avatar")
+    /// Image `text_weNovel`.
+    static let text_weNovel = Rswift.ImageResource(bundle: R.hostingBundle, name: "text_weNovel")
+    /// Image `tool_bar_bg`.
+    static let tool_bar_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "tool_bar_bg")
     
-    /// `UIImage(named: "btn_add", bundle: ..., traitCollection: ...)`
-    static func btn_add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.btn_add, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "btn_radom", bundle: ..., traitCollection: ...)`
-    static func btn_radom(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.btn_radom, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "btn_send", bundle: ..., traitCollection: ...)`
-    static func btn_send(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.btn_send, compatibleWith: traitCollection)
+    /// `UIImage(named: "btn_gray_round_border_bg", bundle: ..., traitCollection: ...)`
+    static func btn_gray_round_border_bg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btn_gray_round_border_bg, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "control_mask_view", bundle: ..., traitCollection: ...)`
@@ -64,56 +126,226 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.control_mask_view, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_add", bundle: ..., traitCollection: ...)`
+    static func icon_add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_add, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_arrow_down", bundle: ..., traitCollection: ...)`
+    static func icon_arrow_down(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_arrow_down, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_arrow_left", bundle: ..., traitCollection: ...)`
+    static func icon_arrow_left(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_arrow_left, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_arrow_right", bundle: ..., traitCollection: ...)`
+    static func icon_arrow_right(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_arrow_right, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_arrow_up", bundle: ..., traitCollection: ...)`
+    static func icon_arrow_up(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_arrow_up, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_calendar", bundle: ..., traitCollection: ...)`
+    static func icon_calendar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_calendar, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_close", bundle: ..., traitCollection: ...)`
+    static func icon_close(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_close, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_commit", bundle: ..., traitCollection: ...)`
+    static func icon_commit(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_commit, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_delete", bundle: ..., traitCollection: ...)`
+    static func icon_delete(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_delete, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_downlooad", bundle: ..., traitCollection: ...)`
+    static func icon_downlooad(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_downlooad, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_edit", bundle: ..., traitCollection: ...)`
+    static func icon_edit(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_edit, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_facebook", bundle: ..., traitCollection: ...)`
+    static func icon_facebook(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_facebook, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_file", bundle: ..., traitCollection: ...)`
+    static func icon_file(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_file, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_filter", bundle: ..., traitCollection: ...)`
+    static func icon_filter(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_filter, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_folder", bundle: ..., traitCollection: ...)`
+    static func icon_folder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_folder, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_full_screen", bundle: ..., traitCollection: ...)`
+    static func icon_full_screen(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_full_screen, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_link", bundle: ..., traitCollection: ...)`
+    static func icon_link(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_link, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_lock", bundle: ..., traitCollection: ...)`
+    static func icon_lock(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_lock, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_logout", bundle: ..., traitCollection: ...)`
+    static func icon_logout(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_logout, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_message", bundle: ..., traitCollection: ...)`
+    static func icon_message(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_message, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_more", bundle: ..., traitCollection: ...)`
+    static func icon_more(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_more, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_printer", bundle: ..., traitCollection: ...)`
+    static func icon_printer(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_printer, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_refresh", bundle: ..., traitCollection: ...)`
+    static func icon_refresh(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_refresh, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_resize_ horizontal", bundle: ..., traitCollection: ...)`
+    static func icon_resize_Horizontal(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_resize_Horizontal, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_resize_vertical", bundle: ..., traitCollection: ...)`
+    static func icon_resize_vertical(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_resize_vertical, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_search", bundle: ..., traitCollection: ...)`
+    static func icon_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_search, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_setting", bundle: ..., traitCollection: ...)`
+    static func icon_setting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_setting, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_share", bundle: ..., traitCollection: ...)`
+    static func icon_share(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_share, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_to", bundle: ..., traitCollection: ...)`
+    static func icon_to(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_to, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_user", bundle: ..., traitCollection: ...)`
+    static func icon_user(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_user, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "login_btn_facebook_bg", bundle: ..., traitCollection: ...)`
+    static func login_btn_facebook_bg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.login_btn_facebook_bg, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "login_btn_phone_bg", bundle: ..., traitCollection: ...)`
+    static func login_btn_phone_bg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.login_btn_phone_bg, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "login_btn_weibo_bg", bundle: ..., traitCollection: ...)`
+    static func login_btn_weibo_bg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.login_btn_weibo_bg, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "login_logo", bundle: ..., traitCollection: ...)`
+    static func login_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.login_logo, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "novel_gray_bg", bundle: ..., traitCollection: ...)`
     static func novel_gray_bg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.novel_gray_bg, compatibleWith: traitCollection)
     }
     
-    fileprivate init() {}
-  }
-  
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
-  struct nib {
-    /// Nib `NovelCardCollectionViewCell`.
-    static let novelCardCollectionViewCell = _R.nib._NovelCardCollectionViewCell()
+    /// `UIImage(named: "resize_button", bundle: ..., traitCollection: ...)`
+    static func resize_button(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.resize_button, compatibleWith: traitCollection)
+    }
     
-    /// `UINib(name: "NovelCardCollectionViewCell", in: bundle)`
-    static func novelCardCollectionViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.novelCardCollectionViewCell)
+    /// `UIImage(named: "text_avatar", bundle: ..., traitCollection: ...)`
+    static func text_avatar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.text_avatar, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "text_weNovel", bundle: ..., traitCollection: ...)`
+    static func text_weNovel(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.text_weNovel, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "tool_bar_bg", bundle: ..., traitCollection: ...)`
+    static func tool_bar_bg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tool_bar_bg, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  struct nib {
+    fileprivate init() {}
+  }
+  
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
   struct reuseIdentifier {
-    /// Reuse identifier `NovelCardCollectionViewCell`.
-    static let novelCardCollectionViewCell: Rswift.ReuseIdentifier<NovelCardCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "NovelCardCollectionViewCell")
-    
     fileprivate init() {}
   }
   
   /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
-    /// This struct is generated for `MainViewController`, and contains static references to 2 segues.
+    /// This struct is generated for `MainViewController`, and contains static references to 1 segues.
     struct mainViewController {
-      /// Segue identifier `SendNewNovel`.
-      static let sendNewNovel: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, SendViewController> = Rswift.StoryboardSegueIdentifier(identifier: "SendNewNovel")
-      /// Segue identifier `ShowDetail`.
-      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, DetailViewController> = Rswift.StoryboardSegueIdentifier(identifier: "ShowDetail")
+      /// Segue identifier `sendNewNovel`.
+      static let sendNewNovel: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, SendStartViewController> = Rswift.StoryboardSegueIdentifier(identifier: "sendNewNovel")
       
-      /// Optionally returns a typed version of segue `SendNewNovel`.
+      /// Optionally returns a typed version of segue `sendNewNovel`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func sendNewNovel(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, SendViewController>? {
+      static func sendNewNovel(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, SendStartViewController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.sendNewNovel, segue: segue)
-      }
-      
-      /// Optionally returns a typed version of segue `ShowDetail`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, DetailViewController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.showDetail, segue: segue)
       }
       
       fileprivate init() {}
@@ -122,16 +354,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 6 storyboards.
   struct storyboard {
     /// Storyboard `DetailViewController`.
     static let detailViewController = _R.storyboard.detailViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
+    /// Storyboard `LoginViewController`.
+    static let loginViewController = _R.storyboard.loginViewController()
     /// Storyboard `MainViewController`.
     static let mainViewController = _R.storyboard.mainViewController()
-    /// Storyboard `SendViewController`.
-    static let sendViewController = _R.storyboard.sendViewController()
+    /// Storyboard `SendNodeViewController`.
+    static let sendNodeViewController = _R.storyboard.sendNodeViewController()
+    /// Storyboard `SendStartViewController`.
+    static let sendStartViewController = _R.storyboard.sendStartViewController()
     
     /// `UIStoryboard(name: "DetailViewController", bundle: ...)`
     static func detailViewController(_: Void = ()) -> UIKit.UIStoryboard {
@@ -143,14 +379,24 @@ struct R: Rswift.Validatable {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
     }
     
+    /// `UIStoryboard(name: "LoginViewController", bundle: ...)`
+    static func loginViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.loginViewController)
+    }
+    
     /// `UIStoryboard(name: "MainViewController", bundle: ...)`
     static func mainViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.mainViewController)
     }
     
-    /// `UIStoryboard(name: "SendViewController", bundle: ...)`
-    static func sendViewController(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.sendViewController)
+    /// `UIStoryboard(name: "SendNodeViewController", bundle: ...)`
+    static func sendNodeViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.sendNodeViewController)
+    }
+    
+    /// `UIStoryboard(name: "SendStartViewController", bundle: ...)`
+    static func sendStartViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.sendStartViewController)
     }
     
     fileprivate init() {}
@@ -177,40 +423,19 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     try storyboard.validate()
-    try nib.validate()
   }
   
-  struct nib: Rswift.Validatable {
-    static func validate() throws {
-      try _NovelCardCollectionViewCell.validate()
-    }
-    
-    struct _NovelCardCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
-      typealias ReusableType = NovelCardCollectionViewCell
-      
-      let bundle = R.hostingBundle
-      let identifier = "NovelCardCollectionViewCell"
-      let name = "NovelCardCollectionViewCell"
-      
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> NovelCardCollectionViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? NovelCardCollectionViewCell
-      }
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "novel_gray_bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'novel_gray_bg' is used in nib 'NovelCardCollectionViewCell', but couldn't be loaded.") }
-      }
-      
-      fileprivate init() {}
-    }
-    
+  struct nib {
     fileprivate init() {}
   }
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try mainViewController.validate()
-      try sendViewController.validate()
+      try sendStartViewController.validate()
       try launchScreen.validate()
+      try mainViewController.validate()
+      try sendNodeViewController.validate()
+      try loginViewController.validate()
     }
     
     struct detailViewController: Rswift.StoryboardResourceWithInitialControllerType {
@@ -229,17 +454,32 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "btn_add") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_add' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "control_mask_view") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'control_mask_view' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "novel_gray_bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'novel_gray_bg' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "btn_radom") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_radom' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "login_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'login_logo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct loginViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = LoginViewController
+      
+      let bundle = R.hostingBundle
+      let name = "LoginViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "login_btn_phone_bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'login_btn_phone_bg' is used in storyboard 'LoginViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "login_btn_facebook_bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'login_btn_facebook_bg' is used in storyboard 'LoginViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "login_btn_weibo_bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'login_btn_weibo_bg' is used in storyboard 'LoginViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "login_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'login_logo' is used in storyboard 'LoginViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn_gray_round_border_bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_gray_round_border_bg' is used in storyboard 'LoginViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_close") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_close' is used in storyboard 'LoginViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
     }
     
     struct mainViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UINavigationController
+      typealias InitialController = MainViewController
       
       let bundle = R.hostingBundle
       let mainViewController = StoryboardViewControllerResource<MainViewController>(identifier: "MainViewController")
@@ -250,8 +490,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "btn_add") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_add' is used in storyboard 'MainViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "btn_radom") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_radom' is used in storyboard 'MainViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "control_mask_view") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'control_mask_view' is used in storyboard 'MainViewController', but couldn't be loaded.") }
         if _R.storyboard.mainViewController().mainViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainViewController' could not be loaded from storyboard 'MainViewController' as 'MainViewController'.") }
       }
@@ -259,14 +497,31 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct sendViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = SendViewController
+    struct sendNodeViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = SendNodeViewController
       
       let bundle = R.hostingBundle
-      let name = "SendViewController"
+      let name = "SendNodeViewController"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "btn_send") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_send' is used in storyboard 'SendViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_commit") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_commit' is used in storyboard 'SendNodeViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "text_avatar") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'text_avatar' is used in storyboard 'SendNodeViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_close") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_close' is used in storyboard 'SendNodeViewController', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct sendStartViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = SendStartViewController
+      
+      let bundle = R.hostingBundle
+      let name = "SendStartViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_commit") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_commit' is used in storyboard 'SendStartViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "text_avatar") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'text_avatar' is used in storyboard 'SendStartViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_close") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_close' is used in storyboard 'SendStartViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

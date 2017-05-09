@@ -7,29 +7,75 @@
 //
 
 import UIKit
+import RxSwift
 import WeNovelKit
+import IQKeyboardManagerSwift
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    fileprivate let disposeBag = DisposeBag()
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         setUpApplication()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        setUpRootViewContrller()
+        setApperance()
+        setUpDependency()
+        window?.makeKeyAndVisible()
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return WNService.application(_:app, open: url, options: options)
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return WNService.application(_: application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
 }
 
 
 extension AppDelegate {
-    func setUpApplication() {
-        WeNovelNetWorking.default.commonErrorHandle = { (_, error) in
-        
+    fileprivate func setUpRootViewContrller() {
+        window?.rootViewController = WNAuthManager.default.readCache() ? R.storyboard.mainViewController().instantiateInitialViewController() : R.storyboard.loginViewController().instantiateInitialViewController()
+        WNAuthManager.default.authChangeObservable.subscribe(onNext: {[weak self] (isAuth) in
+            guard let `self` = self else { return }
+            guard let w = self.window else { return }
+            let vc = isAuth ? R.storyboard.mainViewController().instantiateInitialViewController() : R.storyboard.loginViewController().instantiateInitialViewController()
+            UIView.transition(with: w, duration: 1, options: .transitionCrossDissolve, animations: {
+                w.rootViewController = vc
+            }, completion: nil)           
+        })
+        .addDisposableTo(disposeBag)
+    }
+    fileprivate func setUpApplication() {
+        WNNetworking.default.commonErrorHandle = { (_, error) in
+            
         }
         
-        WeNovelNetWorking.default.noAuthErrorHandle = { (_, error) in
-        
+        WNNetworking.default.noAuthErrorHandle = { (_, error) in
+            
         }
     }
+    
+    
+    fileprivate func setUpDependency() {
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().previousNextDisplayMode = .alwaysHide
+        IQKeyboardManager.sharedManager().disabledDistanceHandlingClasses = [SendStartViewController.self, SendNodeViewController.self]
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
+    }
+    
+    
+    fileprivate func setApperance() {
+        UIToolbar.appearance().tintColor = UIColor.darkGray
+    }
+    
+
+
 }
+
 
