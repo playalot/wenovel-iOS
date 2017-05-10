@@ -12,12 +12,12 @@
           "width" : 1
         },
         "cap-insets" : {
-          "right" : 119,
-          "left" : 137
+          "right" : 96,
+          "left" : 95
         }
       },
       "idiom" : "universal",
-      "filename" : "tool_bg@2x.png",
+      "filename" : "tool_bar_bg@2x.png",
       "scale" : "2x"
     },
     {
@@ -28,12 +28,12 @@
           "width" : 1
         },
         "cap-insets" : {
-          "right" : 216,
-          "left" : 156
+          "right" : 152,
+          "left" : 131
         }
       },
       "idiom" : "universal",
-      "filename" : "tool_bg@3x.png",
+      "filename" : "tool_bar_bg@3x.png",
       "scale" : "3x"
     }
   ],

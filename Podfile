@@ -21,7 +21,6 @@ end
 def uiframework
     pod 'YYWebImage'
     pod 'YYImage/WebP'
-    pod 'IBAnimatable'
     pod 'FDFullscreenPopGesture'
     pod 'YYText'
     pod 'SVProgressHUD'

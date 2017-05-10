@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        setApperance()
         setUpApplication()
         window = UIWindow(frame: UIScreen.main.bounds)
         setUpRootViewContrller()
-        setApperance()
         setUpDependency()
         window?.makeKeyAndVisible()
         return true
@@ -64,14 +64,21 @@ extension AppDelegate {
     
     fileprivate func setUpDependency() {
         IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().toolbarDoneBarButtonItemImage = R.image.icon_arrow_down()
         IQKeyboardManager.sharedManager().previousNextDisplayMode = .alwaysHide
         IQKeyboardManager.sharedManager().disabledDistanceHandlingClasses = [SendStartViewController.self, SendNodeViewController.self]
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        UINavigationBar.appearance().backIndicatorImage = R.image.icon_arrow_left()
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = R.image.icon_arrow_left()
+        UITableViewCell.appearance().selectionStyle = .none
         SVProgressHUD.setMinimumDismissTimeInterval(1)
     }
     
     
     fileprivate func setApperance() {
         UIToolbar.appearance().tintColor = UIColor.darkGray
+        
     }
     
 

@@ -44,7 +44,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ih-qB-L2J" customClass="ActionToolbar" customModule="WeNovel" customModuleProvider="target">
                                 <rect key="frame" x="30" y="587" width="315" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="sQL-SY-3vS"/>
                                 </constraints>
@@ -71,8 +71,10 @@
                     <navigationItem key="navigationItem" id="Fs3-Uy-MtR"/>
                     <connections>
                         <outlet property="actionToolbar" destination="5Ih-qB-L2J" id="539-V1-g8M"/>
-                        <outlet property="collectionView" destination="qhx-Ht-a7Q" id="nzr-at-eDo"/>
+                        <outlet property="collectionLayout" destination="itv-Ht-2Pt" id="YBu-LS-rhP"/>
+                        <outlet property="novelList" destination="qhx-Ht-a7Q" id="LmG-sE-6cM"/>
                         <segue destination="sUx-Ub-s6U" kind="show" identifier="sendNewNovel" id="gag-Vw-gMm"/>
+                        <segue destination="ZQc-3G-wOT" kind="show" identifier="mineInfo" id="j6X-h1-Zns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,7 +87,15 @@
                 <viewControllerPlaceholder storyboardName="SendStartViewController" id="sUx-Ub-s6U" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0I-An-QuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531" y="38"/>
+            <point key="canvasLocation" x="1630" y="132"/>
+        </scene>
+        <!--MineInfoViewController-->
+        <scene sceneID="LrZ-gx-SD3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MineInfoViewController" id="ZQc-3G-wOT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBL-jd-6Ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="-47"/>
         </scene>
     </scenes>
     <resources>

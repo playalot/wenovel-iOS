@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 41 images.
+  /// This `R.image` struct is generated, and contains static references to 43 images.
   struct image {
     /// Image `btn_gray_round_border_bg`.
     static let btn_gray_round_border_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_gray_round_border_bg")
@@ -51,6 +51,8 @@ struct R: Rswift.Validatable {
     static let icon_calendar = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_calendar")
     /// Image `icon_close`.
     static let icon_close = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_close")
+    /// Image `icon_comment`.
+    static let icon_comment = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_comment")
     /// Image `icon_commit`.
     static let icon_commit = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_commit")
     /// Image `icon_delete`.
@@ -69,6 +71,8 @@ struct R: Rswift.Validatable {
     static let icon_folder = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_folder")
     /// Image `icon_full_screen`.
     static let icon_full_screen = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_full_screen")
+    /// Image `icon_like`.
+    static let icon_like = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_like")
     /// Image `icon_link`.
     static let icon_link = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_link")
     /// Image `icon_lock`.
@@ -105,8 +109,8 @@ struct R: Rswift.Validatable {
     static let login_btn_weibo_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "login_btn_weibo_bg")
     /// Image `login_logo`.
     static let login_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "login_logo")
-    /// Image `novel_gray_bg`.
-    static let novel_gray_bg = Rswift.ImageResource(bundle: R.hostingBundle, name: "novel_gray_bg")
+    /// Image `nav_shadow_background`.
+    static let nav_shadow_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_shadow_background")
     /// Image `resize_button`.
     static let resize_button = Rswift.ImageResource(bundle: R.hostingBundle, name: "resize_button")
     /// Image `text_avatar`.
@@ -161,6 +165,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_close, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_comment", bundle: ..., traitCollection: ...)`
+    static func icon_comment(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_comment, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_commit", bundle: ..., traitCollection: ...)`
     static func icon_commit(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_commit, compatibleWith: traitCollection)
@@ -204,6 +213,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_full_screen", bundle: ..., traitCollection: ...)`
     static func icon_full_screen(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_full_screen, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_like", bundle: ..., traitCollection: ...)`
+    static func icon_like(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_like, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_link", bundle: ..., traitCollection: ...)`
@@ -296,9 +310,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.login_logo, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "novel_gray_bg", bundle: ..., traitCollection: ...)`
-    static func novel_gray_bg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.novel_gray_bg, compatibleWith: traitCollection)
+    /// `UIImage(named: "nav_shadow_background", bundle: ..., traitCollection: ...)`
+    static func nav_shadow_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_shadow_background, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "resize_button", bundle: ..., traitCollection: ...)`
@@ -329,17 +343,33 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `SettingSignOutTableViewCell`.
+    static let settingSignOutTableViewCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "SettingSignOutTableViewCell")
+    /// Reuse identifier `UserInfoPreviewTableViewCell`.
+    static let userInfoPreviewTableViewCell: Rswift.ReuseIdentifier<SettingUserPreviewTableViewCell> = Rswift.ReuseIdentifier(identifier: "UserInfoPreviewTableViewCell")
+    /// Reuse identifier `UserInfoTextTableViewCell`.
+    static let userInfoTextTableViewCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "UserInfoTextTableViewCell")
+    
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
-    /// This struct is generated for `MainViewController`, and contains static references to 1 segues.
+    /// This struct is generated for `MainViewController`, and contains static references to 2 segues.
     struct mainViewController {
+      /// Segue identifier `mineInfo`.
+      static let mineInfo: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, BaseNavigationViewController> = Rswift.StoryboardSegueIdentifier(identifier: "mineInfo")
       /// Segue identifier `sendNewNovel`.
       static let sendNewNovel: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, SendStartViewController> = Rswift.StoryboardSegueIdentifier(identifier: "sendNewNovel")
+      
+      /// Optionally returns a typed version of segue `mineInfo`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func mineInfo(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, BaseNavigationViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.mineInfo, segue: segue)
+      }
       
       /// Optionally returns a typed version of segue `sendNewNovel`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
@@ -351,10 +381,34 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This struct is generated for `MineInfoViewController`, and contains static references to 2 segues.
+    struct mineInfoViewController {
+      /// Segue identifier `about`.
+      static let about: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MineInfoViewController, UIKit.UIViewController> = Rswift.StoryboardSegueIdentifier(identifier: "about")
+      /// Segue identifier `settingList`.
+      static let settingList: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MineInfoViewController, SettingViewController> = Rswift.StoryboardSegueIdentifier(identifier: "settingList")
+      
+      /// Optionally returns a typed version of segue `about`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func about(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MineInfoViewController, UIKit.UIViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mineInfoViewController.about, segue: segue)
+      }
+      
+      /// Optionally returns a typed version of segue `settingList`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func settingList(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MineInfoViewController, SettingViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mineInfoViewController.settingList, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 6 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 7 storyboards.
   struct storyboard {
     /// Storyboard `DetailViewController`.
     static let detailViewController = _R.storyboard.detailViewController()
@@ -364,6 +418,8 @@ struct R: Rswift.Validatable {
     static let loginViewController = _R.storyboard.loginViewController()
     /// Storyboard `MainViewController`.
     static let mainViewController = _R.storyboard.mainViewController()
+    /// Storyboard `MineInfoViewController`.
+    static let mineInfoViewController = _R.storyboard.mineInfoViewController()
     /// Storyboard `SendNodeViewController`.
     static let sendNodeViewController = _R.storyboard.sendNodeViewController()
     /// Storyboard `SendStartViewController`.
@@ -387,6 +443,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "MainViewController", bundle: ...)`
     static func mainViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.mainViewController)
+    }
+    
+    /// `UIStoryboard(name: "MineInfoViewController", bundle: ...)`
+    static func mineInfoViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.mineInfoViewController)
     }
     
     /// `UIStoryboard(name: "SendNodeViewController", bundle: ...)`
@@ -434,6 +495,7 @@ struct _R: Rswift.Validatable {
       try sendStartViewController.validate()
       try launchScreen.validate()
       try mainViewController.validate()
+      try mineInfoViewController.validate()
       try sendNodeViewController.validate()
       try loginViewController.validate()
     }
@@ -492,6 +554,20 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "control_mask_view") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'control_mask_view' is used in storyboard 'MainViewController', but couldn't be loaded.") }
         if _R.storyboard.mainViewController().mainViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainViewController' could not be loaded from storyboard 'MainViewController' as 'MainViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct mineInfoViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = BaseNavigationViewController
+      
+      let bundle = R.hostingBundle
+      let name = "MineInfoViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "text_avatar") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'text_avatar' is used in storyboard 'MineInfoViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "nav_shadow_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'nav_shadow_background' is used in storyboard 'MineInfoViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
