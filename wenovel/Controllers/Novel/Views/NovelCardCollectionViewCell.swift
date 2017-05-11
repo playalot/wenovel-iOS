@@ -9,6 +9,7 @@
 import UIKit
 import YYText
 import YYImage
+import WeNovelKit
 
 class NovelCardCollectionViewCell: UICollectionViewCell, Reusable {
     
@@ -113,11 +114,30 @@ class NovelCardCollectionViewCell: UICollectionViewCell, Reusable {
         attr.append(title)
         attr.append(content)
         contentText.attributedText = attr
-    
     }
 
+    func configureWithModel(_ dataModel: WNNovelNode) {
+        userImage.loadURL(url: dataModel.user?.avatar)
+        userName.text = dataModel.user?.nickname
+        let attr = NSMutableAttributedString()
+        attr.yy_color = UIColor.black
+        if let t = dataModel.storyTitle {
+            let title = NSMutableAttributedString(string: t + "\n")
+            title.yy_font = UIFont.boldSystemFont(ofSize: 16)
+            title.yy_minimumLineHeight = 30
+            attr.append(title)
+        }
+        let content = NSMutableAttributedString(string: dataModel.content ?? "")
+        content.yy_font = UIFont.systemFont(ofSize: 15)
+        content.yy_minimumLineHeight = 20
+        attr.append(content)
+        contentText.attributedText = attr
+        
+
+    }
+    
     override func draw(_ rect: CGRect) {
-        let color = UIColor(white: 0.9, alpha: 1)
+        let color = UIColor(white: 0.85, alpha: 1)
         let rectanglePath = UIBezierPath(roundedRect: rect.insetBy(dx: 14, dy: 7), cornerRadius: 4)
         color.setStroke()
         UIColor.white.setFill()

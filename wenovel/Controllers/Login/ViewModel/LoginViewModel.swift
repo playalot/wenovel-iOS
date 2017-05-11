@@ -16,11 +16,12 @@ class OAuthLoginViewModel {
     let signedIn: Observable<WNResult<String>>
     
     init(input oauthLoginTap: Observable<WNOAthType>) {
-        signedIn = oauthLoginTap.flatMap({ oauthType in
-                return WNAuthManager.default.oAuth(type: oauthType)
+        signedIn = oauthLoginTap.flatMap({ oauthType -> Observable<WNResult<String>> in
+            return WNAuthManager.default.oAuth(type: oauthType)
+                .mapToType(success: "Login Success", error: "Login Error")
             })
-            .mapToValue(WNResult<String>.success(value: "Login success"))
-            .catchError({ Observable.just(WNResult<String>.error(error: $0))})
+        
+        
     }
 }
 
@@ -43,9 +44,12 @@ class MobileLoginViewModel {
         validatedPhone = countryAndPhone.flatMap({ p, c in ValidationService.validatePhone(p, country: c) })
         validatedVerification = input.verification.flatMap({ c in ValidationService.validateCode(c)})
         let mobileLoginDriver = Observable.combineLatest(input.country, input.phone, input.verification, resultSelector: { c, p, v in (c, p, v) })
-            .flatMap({ c, p , v in WNAuthManager.default.mobile(country: c, phone: p, code: v)})
-            .mapToWNResult(success: "Login success", error: "Login error")
+            .flatMap({ c, p , v in
+                return WNAuthManager.default.mobile(country: c, phone: p, code: v)
+                    .mapToType(success: "Login success", error: "Login error")
 
+            })
+        
         signedIn = mobileLoginDriver
     }
 }

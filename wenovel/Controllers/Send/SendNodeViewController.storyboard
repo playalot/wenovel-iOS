@@ -68,6 +68,12 @@
                             <constraint firstItem="W3t-2i-dtk" firstAttribute="centerY" secondItem="JXe-wc-Pfy" secondAttribute="centerY" id="wzo-nS-MA7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancleButton" destination="W3t-2i-dtk" id="Tfl-t2-nIC"/>
+                        <outlet property="commitButton" destination="paN-JF-ojC" id="8E4-qx-KR3"/>
+                        <outlet property="contentText" destination="4qH-hX-KYs" id="Vxo-gz-Wo2"/>
+                        <outlet property="userAvatar" destination="JXe-wc-Pfy" id="vfG-vF-aRP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqw-gR-7X5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

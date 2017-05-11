@@ -10,6 +10,7 @@ import UIKit
 import WeNovelKit
 import SnapKit
 import SVProgressHUD
+import YYWebImage
 
 extension SVProgressHUD {
     static func showResult(_ result: WNResult<String>) {
@@ -239,12 +240,16 @@ extension UIViewController {
         }
     }
     
-    @objc private func closeBarButtonDidClick(_ btn: UIBarButtonItem) {
+    @objc func closeBarButtonDidClick(_ btn: UIBarButtonItem?) {
         dismiss(animated: true, completion: nil)
     }
     
-    @objc private func backBarButtonDidClick(_ btn: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
+    @objc func backBarButtonDidClick(_ btn: UIBarButtonItem?) {
+        if let nav = navigationController, nav.viewControllers.count == 1 {
+            dismiss(animated: true, completion: nil)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
     }
     func addCloseBarButtonItem() -> UIBarButtonItem {
         let btn = UIBarButtonItem(image: R.image.icon_close()?.resize(maxHeight: 16), style: UIBarButtonItemStyle.plain, target: self, action: #selector(UIViewController.closeBarButtonDidClick(_:)))
@@ -258,6 +263,13 @@ extension UIViewController {
         btn.tag = kBackBarButtonTag
         navigationItem.leftBarButtonItem = btn
         return btn
+    }
+}
+
+
+extension UIImageView {
+    func loadURL(url: URL?) {
+        yy_setImage(with: url, options: YYWebImageOptions.setImageWithFadeAnimation)
     }
 }
 

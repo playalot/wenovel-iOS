@@ -14,17 +14,7 @@ import FDFullscreenPopGesture
 
 class SendStartViewController: UIViewController {
     
-    struct Cache: SendTempCache {
-        func cacheNovel(title: String?, content: String?, id: String) -> Bool {
-            return false
-        }
-        
-        func readCache(id: String) -> (title: String?, content: String?)? {
-            return nil
-        }
-    }
-
-
+    
     private var disposeBag: DisposeBag!
     private var viewModel: SendStartViewModel!
     @IBOutlet weak var cancleButton: UIButton! {
@@ -39,8 +29,7 @@ class SendStartViewController: UIViewController {
     }
     @IBOutlet weak var userAvatar: UIImageView! {
         didSet {
-            userAvatar.layer.cornerRadius = 15
-            userAvatar.clipsToBounds = true
+            userAvatar.addCorner(radius: 13, sourceSize: CGSize(width: 30, height: 30), color: UIColor.white)
         }
     }
     @IBOutlet weak var titleTextView: UITextView! {
@@ -75,7 +64,7 @@ class SendStartViewController: UIViewController {
                                                     saveCache: Observable<Void>.never(),
                                                     readCache: Observable<Void>.never(),
                                                     send: send),
-                                            dependency: SendStartViewController.Cache())
+                                            dependency: NovelSendTempCacheImp())
         
         Signal.keyboardHeight()
             .subscribeOn(MainScheduler.asyncInstance)
@@ -93,10 +82,12 @@ class SendStartViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         viewModel.sendNovel
-            .do(onNext: {[weak self] _ in
-                self?.dismiss(animated: true, completion: nil)
+            .subscribe(onNext: {[weak self] res in
+                SVProgressHUD.showResult(res)
+                if res.isSuccess() {
+                     self?.dismiss(animated: true, completion: nil)
+                }
             })
-            .subscribe(onNext: SVProgressHUD.showResult)
             .addDisposableTo(disposeBag)
         
     }

@@ -13,6 +13,14 @@ public func  WNBuildError(code: Int, reson: String) -> Error {
 }
 
 
+public let IDNOTFOUND = "IDNOTFOUND"
+extension String {
+    public var isValidId: Bool {
+        return self != "" && self != IDNOTFOUND
+    }
+}
+
+
 class WNDateTransform: TransformType {
     
     typealias Object = Date
@@ -38,6 +46,7 @@ class WNDateTransform: TransformType {
 
 public struct Transform {
     static let date = WNDateTransform()
+    static let url = URLTransform()
 }
 
 
@@ -68,3 +77,67 @@ public struct WNAuthRespone: Mappable {
         accessToken <- map["accessToken"]
     }
 }
+
+
+public struct WNNovelNode: Mappable {
+    public private(set) var id: String?
+    public private(set) var storyId: String?
+    public private(set) var storyTitle: String?
+    public private(set) var content: String?
+    public private(set) var created: Date?
+    public private(set) var counts: WNNovelCount?
+    public private(set) var user: WNUser?
+    
+    public init?(map: Map) {
+    }
+    public mutating func mapping(map: Map) {
+        id <- map["id"]
+        storyId <- map["storyId"]
+        storyTitle <- map["storyTitle"]
+        content <- map["content"]
+        counts <- map["counts"]
+        created <- map["created"]
+        user <- map["user"]
+    }
+    
+}
+
+
+public struct WNNovelCount: Mappable {
+    public private(set) var views = 0
+    public private(set) var likes = 0
+    public private(set) var nodes = 0
+    public init?(map: Map) {
+    }
+    public mutating func mapping(map: Map) {
+        views <- map["views"]
+        likes <- map["likes"]
+        nodes <- map["nodes"]
+    }
+}
+
+
+
+
+
+public struct WNUser: Mappable {
+    
+    public private(set) var id : String?
+    public private(set) var nickname : String?
+    public private(set) var avatar : URL?
+    
+    public init?(map: Map) {
+    }
+    public mutating func mapping(map: Map) {
+        avatar <- (map["avatar"], Transform.url)
+        id <- map["id"]
+        nickname <- map["nickname"]
+    }
+}
+
+
+
+
+
+
+

@@ -96,7 +96,7 @@ public struct WNRequest {
         public func toRequestEntity() -> RequestEntity {
             switch self {
             case .home(let page):
-                return RequestEntity(GET: "novel/home")
+                return RequestEntity(GET: "homeFeeds")
                 .addQuery("page", value: page)
                 
             case .like(let id):
@@ -120,7 +120,7 @@ public struct WNRequest {
                     .addMapBody(req)
                     .addMapBody(option, forKey: "option")
             case .continueNovel(let id, let req):
-                return RequestEntity(POST: "story/\(id)/continue")
+                return RequestEntity(POST: "node/\(id)")
                     .addMapBody(req)
             }
         }

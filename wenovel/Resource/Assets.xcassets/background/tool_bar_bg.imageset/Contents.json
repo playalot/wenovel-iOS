@@ -12,8 +12,8 @@
           "width" : 1
         },
         "cap-insets" : {
-          "right" : 96,
-          "left" : 95
+          "right" : 97,
+          "left" : 102
         }
       },
       "idiom" : "universal",
@@ -28,8 +28,8 @@
           "width" : 1
         },
         "cap-insets" : {
-          "right" : 152,
-          "left" : 131
+          "right" : 158,
+          "left" : 141
         }
       },
       "idiom" : "universal",

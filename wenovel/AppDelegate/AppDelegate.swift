@@ -71,7 +71,9 @@ extension AppDelegate {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         UINavigationBar.appearance().backIndicatorImage = R.image.icon_arrow_left()
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = R.image.icon_arrow_left()
+        UINavigationBar.appearance().tintColor = UIColor.darkGray
         UITableViewCell.appearance().selectionStyle = .none
+        
         SVProgressHUD.setMinimumDismissTimeInterval(1)
     }
     

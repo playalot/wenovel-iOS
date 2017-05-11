@@ -11,7 +11,8 @@ import RxSwift
 import WeNovelKit
 
 class MainViewController: UIViewController {
-    private let disposeBag = DisposeBag()
+    private var disposeBag: DisposeBag!
+    fileprivate var viewModel: NovelFeedViewModel!
     private let actionButton = (refresh: UIButton(image: R.image.icon_refresh()?.resize(maxHeight: 16)),
                                 add: UIButton(image: R.image.icon_add()?.resize(maxHeight: 16)),
                                 user: UIButton(image: R.image.icon_user()?.resize(maxHeight: 16)))
@@ -42,10 +43,24 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureWithObservable()
-        actionToolbar.show()
+        layoutViewController()
+        actionToolbar.show(duration: 1)
+        novelList.headerBeginRefresh()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        novelList.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
     }
 
+    private func layoutViewController() {
+        navigationItem.title = "W E N O V E L"
+    }
+    
     private func configureWithObservable() {
+        disposeBag = nil
+        disposeBag = DisposeBag()
+        viewModel = NovelFeedViewModel(input: novelList.rx_beginRefresh(), dependency: NovelRenderImp())
         actionButton.add.rx.tap
             .subscribe(onNext: {[weak self] _ in
                    self?.performSegue(withIdentifier: R.segue.mainViewController.sendNewNovel.identifier, sender: nil)
@@ -57,35 +72,49 @@ class MainViewController: UIViewController {
                 self?.performSegue(withIdentifier: R.segue.mainViewController.mineInfo.identifier, sender: nil)
             })
             .addDisposableTo(disposeBag)
-        
-//        actionButton.refresh.rx.tap
-//            .subscribe(onNext: {[waek self] _ in
-//                
-//            })
-//            .addDisposableTo(disposeBag)
+        viewModel.novelSignal
+            .do(onNext:  {[weak self] _ in
+                self?.novelList.reloadData()
+                })
+            .subscribe({ [weak self] _ in
+                self?.novelList.headerEndRefresh()
+                self?.novelList.footerEndRefresh()
+            })
+            .addDisposableTo(disposeBag)
         
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+        guard let iden = segue.identifier else { return }
+        switch  iden {
+        case R.segue.mainViewController.showDetail.identifier:
+            guard let data = sender,
+                let model = data as? WNNovelNode,
+                let vc = segue.destination as? NovelDetailViewController else { return }
+            vc.initData = model
+        default:
+            break
+        }
     }
 
 }
 
-// MARK: - Target-Action
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.novelData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data = viewModel.novelData[indexPath.row]
+        performSegue(withIdentifier: R.segue.mainViewController.showDetail, sender: data)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: NovelCardCollectionViewCell = collectionView.dequeueReusableCell(indexPath)
-        cell.test()
+        let data = viewModel.novelData[indexPath.row]
+        cell.configureWithModel(data)
         return cell
     }
 }

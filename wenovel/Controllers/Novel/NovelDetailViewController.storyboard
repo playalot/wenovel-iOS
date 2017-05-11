@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v0I-2Q-Txv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Novel Detail-->
+        <scene sceneID="eXL-JN-7zK">
+            <objects>
+                <viewController title="Novel Detail" automaticallyAdjustsScrollViewInsets="NO" id="v0I-2Q-Txv" customClass="NovelDetailViewController" customModule="WeNovel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yd4-W3-Jhv"/>
+                        <viewControllerLayoutGuide type="bottom" id="S7d-2G-YYc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="11A-1r-WLU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yhA-od-VRC">
+                                <rect key="frame" x="16" y="28" width="343" height="184"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c13-YJ-WjI">
+                                <rect key="frame" x="172" y="220" width="30" height="20"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="EaV-B7-CM4"/>
+                                    <constraint firstAttribute="width" constant="30" id="Y43-dp-b2h"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="resize_button"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EUt-O7-A4a" appends="YES" id="9bW-W8-kPG"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-x3-8mL">
+                                <rect key="frame" x="16" y="248" width="343" height="419"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j0M-6t-MT4">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="v0I-2Q-Txv" id="ZGX-vE-iZw"/>
+                                    <outlet property="delegate" destination="v0I-2Q-Txv" id="X0H-v8-2H2"/>
+                                </connections>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="control_mask_view" translatesAutoresizingMaskIntoConstraints="NO" id="T9r-Wu-rWh">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="brh-2H-yiK"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgH-5m-i9G" customClass="ActionToolbar" customModule="WeNovel" customModuleProvider="target">
+                                <rect key="frame" x="30" y="587" width="315" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qU1-dR-UG2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yhA-od-VRC" firstAttribute="leading" secondItem="11A-1r-WLU" secondAttribute="leadingMargin" id="6Py-9N-AvS"/>
+                            <constraint firstItem="PgH-5m-i9G" firstAttribute="leading" secondItem="T9r-Wu-rWh" secondAttribute="leading" constant="30" id="HKR-Hb-Jwo"/>
+                            <constraint firstItem="S7d-2G-YYc" firstAttribute="top" secondItem="PgH-5m-i9G" secondAttribute="bottom" constant="20" id="Kc6-Em-hhh"/>
+                            <constraint firstItem="c13-YJ-WjI" firstAttribute="top" secondItem="Yd4-W3-Jhv" secondAttribute="bottom" constant="200" id="N35-vb-cbC"/>
+                            <constraint firstItem="ibr-x3-8mL" firstAttribute="trailing" secondItem="11A-1r-WLU" secondAttribute="trailingMargin" id="OMQ-4X-WrN"/>
+                            <constraint firstItem="ibr-x3-8mL" firstAttribute="top" secondItem="c13-YJ-WjI" secondAttribute="bottom" constant="8" id="SCf-OC-otH"/>
+                            <constraint firstItem="ibr-x3-8mL" firstAttribute="leading" secondItem="11A-1r-WLU" secondAttribute="leadingMargin" id="Wh6-jm-XvT"/>
+                            <constraint firstItem="PgH-5m-i9G" firstAttribute="trailing" secondItem="T9r-Wu-rWh" secondAttribute="trailing" constant="-30" id="eVQ-gH-qjC"/>
+                            <constraint firstItem="c13-YJ-WjI" firstAttribute="centerX" secondItem="11A-1r-WLU" secondAttribute="centerX" id="g3S-oO-tVp"/>
+                            <constraint firstItem="S7d-2G-YYc" firstAttribute="top" secondItem="T9r-Wu-rWh" secondAttribute="bottom" id="ldz-Vq-1OJ"/>
+                            <constraint firstItem="c13-YJ-WjI" firstAttribute="top" secondItem="yhA-od-VRC" secondAttribute="bottom" constant="8" id="pxh-au-M76"/>
+                            <constraint firstItem="yhA-od-VRC" firstAttribute="top" secondItem="Yd4-W3-Jhv" secondAttribute="bottom" constant="8" id="sUN-GA-soe"/>
+                            <constraint firstItem="S7d-2G-YYc" firstAttribute="top" secondItem="ibr-x3-8mL" secondAttribute="bottom" id="sgA-2o-bny"/>
+                            <constraint firstItem="yhA-od-VRC" firstAttribute="trailing" secondItem="11A-1r-WLU" secondAttribute="trailingMargin" id="uHS-Vu-osY"/>
+                            <constraint firstAttribute="trailing" secondItem="T9r-Wu-rWh" secondAttribute="trailing" id="wDb-Kc-i2P"/>
+                            <constraint firstItem="T9r-Wu-rWh" firstAttribute="leading" secondItem="11A-1r-WLU" secondAttribute="leading" id="yZO-YQ-FBL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="rug-ph-elo"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="showBackBarButtonItem" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="actionToolbar" destination="PgH-5m-i9G" id="ua7-aS-0Ub"/>
+                        <outlet property="collectionViewLayout" destination="j0M-6t-MT4" id="ikE-ad-pJa"/>
+                        <outlet property="novelList" destination="ibr-x3-8mL" id="Vfx-WE-gRy"/>
+                        <outlet property="resizeYPosition" destination="N35-vb-cbC" id="Drr-g4-T3K"/>
+                        <outlet property="textContent" destination="yhA-od-VRC" id="lqX-dq-zQg"/>
+                        <segue destination="QfC-IM-xVw" kind="presentation" identifier="sendNode" id="QLu-8e-fzx"/>
+                        <segue destination="L1N-Fq-IWa" kind="show" identifier="showDetail" id="f5B-H9-Ni4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPJ-w5-oVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="EUt-O7-A4a">
+                    <connections>
+                        <action selector="resizeButtonDidPan:" destination="v0I-2Q-Txv" id="n57-d9-b6r"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="51.724137931034484"/>
+        </scene>
+        <!--SendNodeViewController-->
+        <scene sceneID="kBg-sp-6e0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SendNodeViewController" id="QfC-IM-xVw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgk-kg-ZY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="-49"/>
+        </scene>
+        <!--NovelDetailViewController-->
+        <scene sceneID="p9Z-fG-3VB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NovelDetailViewController" id="L1N-Fq-IWa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oms-Ou-eHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="148"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="control_mask_view" width="414" height="150"/>
+        <image name="resize_button" width="30" height="20"/>
+    </resources>
+</document>

@@ -26,7 +26,10 @@ extension NSError {
 
 
 
+
 extension Observable {
+    
+    
     public func mapToValue<R>(_ value: R) -> Observable<R> {
         return self.map({ _ in
             return value
@@ -40,15 +43,27 @@ extension Observable {
     }
     
     
-    public func mapToWNResult(success: String, error: String) -> Observable<WNResult<String>> {
-        return self.map({ _ -> WNResult<String> in
-                return WNResult<String>.success(value: success)
+    public func mapToResult(error: String) -> Observable<WNResult<Element>> {
+        return self.map({ element -> WNResult<Element> in
+                return WNResult<Element>.success(value: element)
             })
-            .catchError({ e -> Observable<WNResult<String>> in
-                let res = WNResult<String>.error(error: e)
-                return Observable<WNResult<String>>.just(res)
+            .catchError({ e -> Observable<WNResult<Element>> in
+                let res = WNResult<Element>.error(error: e)
+                return Observable<WNResult<Element>>.just(res)
+            })
+    }
+    
+    
+    public func mapToType<T>(success: T, error: T) -> Observable<WNResult<T>> {
+        return self.map({ _ -> WNResult<T> in
+                return WNResult<T>.success(value: success)
+            })
+            .catchError({ e -> Observable<WNResult<T>> in
+                let res = WNResult<T>.error(error: e)
+                return Observable<WNResult<T>>.just(res)
             })
     }
     
    
 }
+

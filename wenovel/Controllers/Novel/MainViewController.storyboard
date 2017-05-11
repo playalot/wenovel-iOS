@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0ta-Fi-aCN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="WeNovel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="WeNovel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qhx-Ht-a7Q">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="itv-Ht-2Pt">
                                     <size key="itemSize" width="355" height="100"/>
@@ -52,20 +51,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qhx-Ht-a7Q" secondAttribute="trailing" id="6mi-EF-xFZ"/>
-                            <constraint firstItem="qhx-Ht-a7Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7Tz-IV-aNS"/>
+                            <constraint firstItem="5Ih-qB-L2J" firstAttribute="leading" secondItem="A6D-Ut-aPN" secondAttribute="leading" constant="30" id="0HI-4s-BiR"/>
+                            <constraint firstAttribute="trailing" secondItem="qhx-Ht-a7Q" secondAttribute="trailing" id="DHm-5t-0EP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A6D-Ut-aPN" secondAttribute="bottom" id="GHX-c3-Nsq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Ih-qB-L2J" secondAttribute="bottom" constant="20" id="Leg-5h-g2i"/>
-                            <constraint firstAttribute="trailing" secondItem="qhx-Ht-a7Q" secondAttribute="trailing" id="RVo-cG-bZO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qhx-Ht-a7Q" secondAttribute="bottom" id="Yxw-yk-73t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qhx-Ht-a7Q" secondAttribute="bottom" id="U7U-mQ-rcK"/>
+                            <constraint firstItem="5Ih-qB-L2J" firstAttribute="trailing" secondItem="A6D-Ut-aPN" secondAttribute="trailing" constant="-30" id="YZQ-a9-NY5"/>
                             <constraint firstItem="A6D-Ut-aPN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dYH-V0-ZFv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Ih-qB-L2J" secondAttribute="trailing" constant="14" id="fei-CQ-QRf"/>
+                            <constraint firstItem="qhx-Ht-a7Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iWX-4V-Yjy"/>
+                            <constraint firstItem="qhx-Ht-a7Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nCZ-do-EHR"/>
                             <constraint firstAttribute="trailing" secondItem="A6D-Ut-aPN" secondAttribute="trailing" id="nQF-dI-NcY"/>
-                            <constraint firstItem="qhx-Ht-a7Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ng8-du-F1Z"/>
-                            <constraint firstItem="qhx-Ht-a7Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rol-lB-haA"/>
-                            <constraint firstItem="qhx-Ht-a7Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u58-nN-VGP"/>
-                            <constraint firstItem="5Ih-qB-L2J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="vUE-iF-ewC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qhx-Ht-a7Q" secondAttribute="bottom" id="wtB-Qb-ZCB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fs3-Uy-MtR"/>
@@ -73,13 +68,14 @@
                         <outlet property="actionToolbar" destination="5Ih-qB-L2J" id="539-V1-g8M"/>
                         <outlet property="collectionLayout" destination="itv-Ht-2Pt" id="YBu-LS-rhP"/>
                         <outlet property="novelList" destination="qhx-Ht-a7Q" id="LmG-sE-6cM"/>
-                        <segue destination="sUx-Ub-s6U" kind="show" identifier="sendNewNovel" id="gag-Vw-gMm"/>
+                        <segue destination="sUx-Ub-s6U" kind="presentation" identifier="sendNewNovel" id="gag-Vw-gMm"/>
                         <segue destination="ZQc-3G-wOT" kind="show" identifier="mineInfo" id="j6X-h1-Zns"/>
+                        <segue destination="XxO-bE-qeO" kind="show" identifier="showDetail" id="8WR-ad-92U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1912.8" y="24.7376311844078"/>
         </scene>
         <!--SendStartViewController-->
         <scene sceneID="jJ4-aL-ygM">
@@ -87,7 +83,15 @@
                 <viewControllerPlaceholder storyboardName="SendStartViewController" id="sUx-Ub-s6U" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0I-An-QuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="132"/>
+            <point key="canvasLocation" x="2698.4000000000001" y="37.331334332833585"/>
+        </scene>
+        <!--NovelDetailViewController-->
+        <scene sceneID="ebj-V5-Uwt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NovelDetailViewController" id="XxO-bE-qeO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSo-Am-cwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704.8000000000002" y="180.35982008995504"/>
         </scene>
         <!--MineInfoViewController-->
         <scene sceneID="LrZ-gx-SD3">
@@ -95,7 +99,26 @@
                 <viewControllerPlaceholder storyboardName="MineInfoViewController" id="ZQc-3G-wOT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBL-jd-6Ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-47"/>
+            <point key="canvasLocation" x="2691.1999999999998" y="-106.59670164917542"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sqk-y8-GPQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ta-Fi-aCN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yQN-Ii-Kie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="enF-y4-duW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smO-JV-jGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
     </scenes>
     <resources>

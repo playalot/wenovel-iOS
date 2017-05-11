@@ -26,6 +26,7 @@ def uiframework
     pod 'SVProgressHUD'
     pod 'IQKeyboardManagerSwift'
     pod 'SnapKit'
+    pod 'MJRefresh'
 end
 
 def cacheframework

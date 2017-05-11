@@ -31,6 +31,9 @@ class LoginViewController: UIViewController {
         
         viewModel = OAuthLoginViewModel(input: facebookAuth)
         viewModel.signedIn
+            .do(onNext: nil, onError: { error in
+                print(error)
+            })
             .subscribe(onNext: SVProgressHUD.showResult)
             .addDisposableTo(disposeBag)
         

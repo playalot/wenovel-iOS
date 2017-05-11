@@ -355,19 +355,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 3 view controllers.
   struct segue {
-    /// This struct is generated for `MainViewController`, and contains static references to 2 segues.
+    /// This struct is generated for `MainViewController`, and contains static references to 3 segues.
     struct mainViewController {
       /// Segue identifier `mineInfo`.
-      static let mineInfo: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, BaseNavigationViewController> = Rswift.StoryboardSegueIdentifier(identifier: "mineInfo")
+      static let mineInfo: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, MineInfoViewController> = Rswift.StoryboardSegueIdentifier(identifier: "mineInfo")
       /// Segue identifier `sendNewNovel`.
       static let sendNewNovel: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, SendStartViewController> = Rswift.StoryboardSegueIdentifier(identifier: "sendNewNovel")
+      /// Segue identifier `showDetail`.
+      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, NovelDetailViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showDetail")
       
       /// Optionally returns a typed version of segue `mineInfo`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func mineInfo(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, BaseNavigationViewController>? {
+      static func mineInfo(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, MineInfoViewController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.mineInfo, segue: segue)
       }
       
@@ -376,6 +378,13 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func sendNewNovel(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, SendStartViewController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.sendNewNovel, segue: segue)
+      }
+      
+      /// Optionally returns a typed version of segue `showDetail`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, NovelDetailViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.showDetail, segue: segue)
       }
       
       fileprivate init() {}
@@ -405,13 +414,35 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This struct is generated for `NovelDetailViewController`, and contains static references to 2 segues.
+    struct novelDetailViewController {
+      /// Segue identifier `sendNode`.
+      static let sendNode: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, NovelDetailViewController, SendNodeViewController> = Rswift.StoryboardSegueIdentifier(identifier: "sendNode")
+      /// Segue identifier `showDetail`.
+      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, NovelDetailViewController, NovelDetailViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showDetail")
+      
+      /// Optionally returns a typed version of segue `sendNode`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func sendNode(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, NovelDetailViewController, SendNodeViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.novelDetailViewController.sendNode, segue: segue)
+      }
+      
+      /// Optionally returns a typed version of segue `showDetail`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, NovelDetailViewController, NovelDetailViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.novelDetailViewController.showDetail, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
   /// This `R.storyboard` struct is generated, and contains static references to 7 storyboards.
   struct storyboard {
-    /// Storyboard `DetailViewController`.
-    static let detailViewController = _R.storyboard.detailViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `LoginViewController`.
@@ -420,15 +451,12 @@ struct R: Rswift.Validatable {
     static let mainViewController = _R.storyboard.mainViewController()
     /// Storyboard `MineInfoViewController`.
     static let mineInfoViewController = _R.storyboard.mineInfoViewController()
+    /// Storyboard `NovelDetailViewController`.
+    static let novelDetailViewController = _R.storyboard.novelDetailViewController()
     /// Storyboard `SendNodeViewController`.
     static let sendNodeViewController = _R.storyboard.sendNodeViewController()
     /// Storyboard `SendStartViewController`.
     static let sendStartViewController = _R.storyboard.sendStartViewController()
-    
-    /// `UIStoryboard(name: "DetailViewController", bundle: ...)`
-    static func detailViewController(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.detailViewController)
-    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -448,6 +476,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "MineInfoViewController", bundle: ...)`
     static func mineInfoViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.mineInfoViewController)
+    }
+    
+    /// `UIStoryboard(name: "NovelDetailViewController", bundle: ...)`
+    static func novelDetailViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.novelDetailViewController)
     }
     
     /// `UIStoryboard(name: "SendNodeViewController", bundle: ...)`
@@ -493,20 +526,12 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try sendStartViewController.validate()
-      try launchScreen.validate()
+      try novelDetailViewController.validate()
       try mainViewController.validate()
+      try launchScreen.validate()
       try mineInfoViewController.validate()
       try sendNodeViewController.validate()
       try loginViewController.validate()
-    }
-    
-    struct detailViewController: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = DetailViewController
-      
-      let bundle = R.hostingBundle
-      let name = "DetailViewController"
-      
-      fileprivate init() {}
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -541,7 +566,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct mainViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = MainViewController
+      typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
       let mainViewController = StoryboardViewControllerResource<MainViewController>(identifier: "MainViewController")
@@ -560,14 +585,27 @@ struct _R: Rswift.Validatable {
     }
     
     struct mineInfoViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = BaseNavigationViewController
+      typealias InitialController = MineInfoViewController
       
       let bundle = R.hostingBundle
       let name = "MineInfoViewController"
       
       static func validate() throws {
         if UIKit.UIImage(named: "text_avatar") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'text_avatar' is used in storyboard 'MineInfoViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "nav_shadow_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'nav_shadow_background' is used in storyboard 'MineInfoViewController', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct novelDetailViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = NovelDetailViewController
+      
+      let bundle = R.hostingBundle
+      let name = "NovelDetailViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "control_mask_view") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'control_mask_view' is used in storyboard 'NovelDetailViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "resize_button") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'resize_button' is used in storyboard 'NovelDetailViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

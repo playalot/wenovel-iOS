@@ -38,16 +38,25 @@ class ActionToolbar: UIView {
     }
     
     
-    func show() {
-        UIView.animate(withDuration: 2/3.0, delay: 1/3.0,options: .curveEaseInOut, animations: {
-            self.bgImage.frame = CGRect(origin: CGPoint.zero, size: self.targetSize)
-        }, completion: { _ in
-            UIView.animate(withDuration: 1/3.0, delay: 0, options: .curveEaseInOut, animations: {
-                for v in self.items {
-                    v.alpha = 1
-                    (v as? UIControl)?.isEnabled = true
-                }
-            }, completion: nil)
-        })
+    func show(duration: TimeInterval? = nil) {
+        if let d = duration {
+            UIView.animate(withDuration: d/2, delay: d/4,options: .curveEaseInOut, animations: {
+                self.bgImage.frame = CGRect(origin: CGPoint.zero, size: self.targetSize)
+            }, completion: { _ in
+                UIView.animate(withDuration: d/4, delay: 0, options: .curveEaseInOut, animations: {
+                    for v in self.items {
+                        v.alpha = 1
+                        (v as? UIControl)?.isEnabled = true
+                    }
+                }, completion: nil)
+            })
+        } else {
+            bgImage.frame = CGRect(origin: CGPoint.zero, size: targetSize)
+            for v in items {
+                v.alpha = 1
+                (v as? UIControl)?.isEnabled = true
+            }
+        }
+        
     }
 }
