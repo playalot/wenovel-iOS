@@ -9,23 +9,46 @@
 import UIKit
 import YYText
 import YYImage
+import YYWebImage
 import WeNovelKit
+
+
+enum NovelAction {
+    case like, dislike, comment, replay, share
+}
+
+protocol NovelCardCellDelegate: class {
+    func novelCardCollectionViewCell(didSelect cell: NovelCardCollectionViewCell, data: WNNovelNode, action: NovelAction)
+}
+
+extension NovelCardCellDelegate {
+    func novelCardCollectionViewCell(didSelect cell: NovelCardCollectionViewCell, data: WNNovelNode, action: NovelAction) {
+        print("\(data)  \(action)")
+    }
+}
 
 class NovelCardCollectionViewCell: UICollectionViewCell, Reusable {
     
     struct Layout {
-        static func height(textHeight: CGFloat) -> CGFloat {
-            return R.Margin.large + R.Margin.large + 20 + R.Margin.small + textHeight + R.Height.toolBar + R.Margin.large
+        static func size(textHeight: CGFloat) -> CGSize {
+            return CGSize(width: R.Width.screen,
+                          height: R.Margin.large + R.Margin.large + 20 + R.Margin.small + textHeight + R.Height.toolBar + R.Margin.large)
+        }
+        struct Image {
+            struct Like {
+                static let active = R.image.icon_like()?.resize(maxHeight: 15).yy_image(byTintColor: UIColor.red)
+                static let deactive = R.image.icon_like()?.resize(maxHeight: 15)
+            }
         }
     }
     private let userImage = UIImageView()
     private let userName = UILabel()
     private let contentText = YYLabel()
     
-    private let likeBtn = UIButton(image: R.image.icon_like()?.resize(maxHeight: 15))
-    private let commentBtn = UIButton(image: R.image.icon_comment()?.resize(maxHeight: 15))
-    private let replayBtn = UIButton(image: R.image.icon_edit()?.resize(maxHeight: 15))
-    private let shareBtn = UIButton(image: R.image.icon_share()?.resize(maxHeight: 15))
+    private let likeBtn = QuickButton(image: Layout.Image.Like.deactive)
+    private let commentBtn = QuickButton(image: R.image.icon_comment()?.resize(maxHeight: 15))
+    private let replayBtn = QuickButton(image: R.image.icon_edit()?.resize(maxHeight: 15))
+    private let shareBtn = QuickButton(image: R.image.icon_share()?.resize(maxHeight: 15))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,7 +76,8 @@ class NovelCardCollectionViewCell: UICollectionViewCell, Reusable {
         
         userImage.addCorner(radius: 10, sourceSize: CGSize(width: 20, height: 20), color: UIColor.white)
         userImage.snp.makeConstraints { (make) in
-            make.top.left.equalTo(R.Margin.large * 2)
+            make.top.equalTo(R.Margin.large * 1.5)
+            make.left.equalTo(R.Margin.large * 2)
             make.size.equalTo(20)
         }
         userName.font = UIFont.boldSystemFont(ofSize: 10)
@@ -99,41 +123,40 @@ class NovelCardCollectionViewCell: UICollectionViewCell, Reusable {
         }
     }
     
-    
-    func test() {
-        userImage.image = R.image.text_avatar()
-        userName.text = "TBXark"
-        let attr = NSMutableAttributedString()
-        attr.yy_color = UIColor.black
-        let title = NSMutableAttributedString(string: "从前有座山,山里有座庙\n")
-        title.yy_font = UIFont.boldSystemFont(ofSize: 16)
-        title.yy_minimumLineHeight = 30
-        let content = NSMutableAttributedString(string: "从前有座山,山里有座庙, 庙里有个老和尚和小和讲故事, 在讲什么呢? 在讲: 从前有座山,山里有座庙, 庙里有个老和尚和小和讲故事, 在讲什么呢? 在讲: 从前有座山,山里有座庙, 庙里有个老和尚和小和讲故事, 在讲什么呢? 从前有座山,山里有座庙, 庙里有个老和尚和小和讲故事, 在讲什么呢? 在讲: 从前有座山,山里有座庙, 庙里有个老和尚和小和讲故事, 在讲什么呢? 在讲:...... ")
-        content.yy_font = UIFont.systemFont(ofSize: 15)
-        content.yy_minimumLineHeight = 20
-        attr.append(title)
-        attr.append(content)
-        contentText.attributedText = attr
-    }
-
-    func configureWithModel(_ dataModel: WNNovelNode) {
-        userImage.loadURL(url: dataModel.user?.avatar)
-        userName.text = dataModel.user?.nickname
-        let attr = NSMutableAttributedString()
-        attr.yy_color = UIColor.black
-        if let t = dataModel.storyTitle {
-            let title = NSMutableAttributedString(string: t + "\n")
-            title.yy_font = UIFont.boldSystemFont(ofSize: 16)
-            title.yy_minimumLineHeight = 30
-            attr.append(title)
-        }
-        let content = NSMutableAttributedString(string: dataModel.content ?? "")
-        content.yy_font = UIFont.systemFont(ofSize: 15)
-        content.yy_minimumLineHeight = 20
-        attr.append(content)
-        contentText.attributedText = attr
+   
+    func configureWithModel(_ dataModel: NovelRenderModel, delegate: NovelCardCellDelegate) {
+        userImage.loadURL(url: dataModel.data.user?.avatar)
+        userName.text = dataModel.data.user?.nickname
+        contentText.attributedText = dataModel.text
         
-
+        likeBtn.setNormalImage(dataModel.data.isLike ? Layout.Image.Like.active : Layout.Image.Like.deactive)
+        likeBtn.setNormalTitle("\(dataModel.data.counts?.likes ?? 0)")
+        
+        likeBtn.clickAction = {[weak self, weak delegate] _ in
+            guard let `self` = self else { return }
+            delegate?.novelCardCollectionViewCell(didSelect: self,
+                                                  data: dataModel.data,
+                                                  action: dataModel.data.isLike ? NovelAction.dislike :  NovelAction.like)
+        }
+        commentBtn.clickAction = {[weak self, weak delegate] _ in
+            guard let `self` = self else { return }
+            delegate?.novelCardCollectionViewCell(didSelect: self,
+                                                  data: dataModel.data,
+                                                  action: NovelAction.comment)
+        }
+        replayBtn.clickAction = {[weak self, weak delegate] _ in
+            guard let `self` = self else { return }
+            delegate?.novelCardCollectionViewCell(didSelect: self,
+                                                  data: dataModel.data,
+                                                  action: NovelAction.replay)
+        }
+        shareBtn.clickAction = {[weak self, weak delegate] _ in
+            guard let `self` = self else { return }
+            delegate?.novelCardCollectionViewCell(didSelect: self,
+                                                  data: dataModel.data,
+                                                  action: NovelAction.share)
+        }
+        
     }
     
     override func draw(_ rect: CGRect) {

@@ -13,8 +13,8 @@ end
 
 def authframework
     pod 'Simplicity'
-    pod 'MonkeyKing'
-    # pod 'OAuthSwift'
+    #pod 'MonkeyKing'
+    #pod 'OpenShare'
 end
 
 

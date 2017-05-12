@@ -71,6 +71,7 @@
                         <segue destination="sUx-Ub-s6U" kind="presentation" identifier="sendNewNovel" id="gag-Vw-gMm"/>
                         <segue destination="ZQc-3G-wOT" kind="show" identifier="mineInfo" id="j6X-h1-Zns"/>
                         <segue destination="XxO-bE-qeO" kind="show" identifier="showDetail" id="8WR-ad-92U"/>
+                        <segue destination="1it-2d-IAH" kind="presentation" identifier="sendNode" id="eZC-E8-BtH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,7 +92,15 @@
                 <viewControllerPlaceholder storyboardName="NovelDetailViewController" id="XxO-bE-qeO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSo-Am-cwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704.8000000000002" y="180.35982008995504"/>
+            <point key="canvasLocation" x="2720" y="258"/>
+        </scene>
+        <!--SendNodeViewController-->
+        <scene sceneID="EpY-0T-jRZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SendNodeViewController" id="1it-2d-IAH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLQ-7s-CF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2682" y="151"/>
         </scene>
         <!--MineInfoViewController-->
         <scene sceneID="LrZ-gx-SD3">
@@ -106,7 +115,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ta-Fi-aCN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yQN-Ii-Kie">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yQN-Ii-Kie">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

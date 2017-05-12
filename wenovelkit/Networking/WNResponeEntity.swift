@@ -63,8 +63,18 @@ public enum ValidationResult {
             return false
         }
     }
-
 }
+
+public protocol BaseModel: Equatable {
+    var id: String? { get }
+}
+
+
+public func == <T: BaseModel>(lhs: T, rhs: T) -> Bool {
+    guard  let l = lhs.id, let r = rhs.id else { return false }
+    return l == r
+}
+
 
 // MARK: Respone
 public struct WNAuthRespone: Mappable {
@@ -79,7 +89,7 @@ public struct WNAuthRespone: Mappable {
 }
 
 
-public struct WNNovelNode: Mappable {
+public struct WNNovelNode: Mappable, BaseModel {
     public private(set) var id: String?
     public private(set) var storyId: String?
     public private(set) var storyTitle: String?
@@ -87,6 +97,7 @@ public struct WNNovelNode: Mappable {
     public private(set) var created: Date?
     public private(set) var counts: WNNovelCount?
     public private(set) var user: WNUser?
+    public private(set) var isLike = false
     
     public init?(map: Map) {
     }
@@ -100,13 +111,21 @@ public struct WNNovelNode: Mappable {
         user <- map["user"]
     }
     
+    mutating public func changLikeState(like: Bool) {
+        self.isLike = like
+        var c = counts ?? WNNovelCount()
+        c.likes = c.likes  + (like ? 1 : -1)
+        counts = c
+    }
+    
 }
 
 
 public struct WNNovelCount: Mappable {
-    public private(set) var views = 0
-    public private(set) var likes = 0
-    public private(set) var nodes = 0
+    public fileprivate(set) var views = 0
+    public fileprivate(set) var likes = 0
+    public fileprivate(set) var nodes = 0
+    init() {}
     public init?(map: Map) {
     }
     public mutating func mapping(map: Map) {
@@ -120,7 +139,7 @@ public struct WNNovelCount: Mappable {
 
 
 
-public struct WNUser: Mappable {
+public struct WNUser: Mappable, BaseModel {
     
     public private(set) var id : String?
     public private(set) var nickname : String?

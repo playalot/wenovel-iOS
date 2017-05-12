@@ -4,7 +4,6 @@ PODS:
   - IQKeyboardManagerSwift (4.0.9)
   - KeychainAccess (3.0.2)
   - MJRefresh (3.1.12)
-  - MonkeyKing (1.2.3)
   - ObjectMapper (2.2.6)
   - R.swift (3.2.0):
     - R.swift.Library (~> 3.0.2)
@@ -32,7 +31,6 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - KeychainAccess
   - MJRefresh
-  - MonkeyKing
   - ObjectMapper
   - R.swift
   - RxCocoa (~> 3.0)
@@ -51,7 +49,6 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  MonkeyKing: 1cfd8fb7984f1d747c1f7c1179d755f8cc58e9b4
   ObjectMapper: '042708195cc46c20871cbcbec0453826398273fd'
   R.swift: 207a372a2b5977caef440c696a368009460641d1
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
@@ -65,6 +62,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 9870ea1216c6eef9f50d5ea7b9a2cad606e5fffb
+PODFILE CHECKSUM: bc7af2001dc1052f9f74bc889c954c40027410c5
 
 COCOAPODS: 1.2.1

@@ -31,6 +31,13 @@ extension UIButton {
         setImage(image, for: .normal)
         imageView?.contentMode = .scaleAspectFit
     }
+    
+    func setNormalImage(_ image: UIImage?) {
+        setImage(image, for: .normal)
+    }
+    func setNormalTitle( _ title: String?) {
+        setTitle(title, for: .normal)
+    }
 }
 
 
@@ -80,8 +87,8 @@ private let kCornerRadiusTag = 100003
 extension UIView {
     func addCorner(radius: CGFloat, sourceSize: CGSize, color: UIColor) {
         for v in subviews {
-            guard let imgv = v as? UIImageView, v.tag == kCornerRadiusTag else { continue }
-            v.removeFromSuperview()
+            guard let imgv = v as? UIImageView, imgv.tag == kCornerRadiusTag else { continue }
+            imgv.removeFromSuperview()
             break
         }
         let imgv = UIImageView(image: UIImage.cornerImage(radius: radius, size: sourceSize, color: color))

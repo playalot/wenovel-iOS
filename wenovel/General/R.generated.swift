@@ -357,12 +357,14 @@ struct R: Rswift.Validatable {
   
   /// This `R.segue` struct is generated, and contains static references to 3 view controllers.
   struct segue {
-    /// This struct is generated for `MainViewController`, and contains static references to 3 segues.
+    /// This struct is generated for `MainViewController`, and contains static references to 4 segues.
     struct mainViewController {
       /// Segue identifier `mineInfo`.
       static let mineInfo: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, MineInfoViewController> = Rswift.StoryboardSegueIdentifier(identifier: "mineInfo")
       /// Segue identifier `sendNewNovel`.
       static let sendNewNovel: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, SendStartViewController> = Rswift.StoryboardSegueIdentifier(identifier: "sendNewNovel")
+      /// Segue identifier `sendNode`.
+      static let sendNode: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, SendNodeViewController> = Rswift.StoryboardSegueIdentifier(identifier: "sendNode")
       /// Segue identifier `showDetail`.
       static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, MainViewController, NovelDetailViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showDetail")
       
@@ -378,6 +380,13 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func sendNewNovel(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, SendStartViewController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.sendNewNovel, segue: segue)
+      }
+      
+      /// Optionally returns a typed version of segue `sendNode`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func sendNode(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, MainViewController, SendNodeViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.mainViewController.sendNode, segue: segue)
       }
       
       /// Optionally returns a typed version of segue `showDetail`.

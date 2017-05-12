@@ -15,6 +15,7 @@ class NovelDetailViewController: UIViewController {
     var initData: (WNNovelNode)?
     
     fileprivate var viewModel: NovelNodeFeedViewModel!
+    fileprivate let nodeAction =  PublishSubject<(NovelAction, WNNovelNode)>()
     private var disposeBag: DisposeBag!
     private let position = (min: R.Height.fullNavigationBar, max: R.Height.screen - 200)
     private let actionButton = (back: UIButton(image: R.image.icon_arrow_left()?.resize(maxHeight: 16)),
@@ -33,12 +34,12 @@ class NovelDetailViewController: UIViewController {
     @IBOutlet weak var resizeYPosition: NSLayoutConstraint!
     @IBOutlet weak var novelList: UICollectionView! {
         didSet {
+            novelList.backgroundColor = UIColor.white
             novelList.registerCell(NovelCardCollectionViewCell.self)
         }
     }
     @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout! {
         didSet {
-            collectionViewLayout.itemSize = CGSize(width: R.Width.screen, height: 300)
             collectionViewLayout.minimumLineSpacing = 1
             collectionViewLayout.minimumInteritemSpacing = 1
         }
@@ -64,7 +65,15 @@ class NovelDetailViewController: UIViewController {
         disposeBag = nil
         disposeBag = DisposeBag()
         
-        viewModel = NovelNodeFeedViewModel(input: (node: initData, refresh: novelList.rx_beginRefresh()), dependency: NovelRenderImp())
+        let like = nodeAction.asObserver()
+            .filter({ a, d in a == .like || a == .dislike })
+            .map({ a , n in  (a == .like, n)})
+
+        let render = NovelRenderImp(style: NovelRenderStyle(),
+                                    maxSize: CGSize(width: R.Width.screen - 4 * R.Margin.large, height: 300),
+                                    toSize: NovelCardCollectionViewCell.Layout.size(textHeight:))
+        viewModel = NovelNodeFeedViewModel(input: (node: initData, refresh: novelList.rx_beginRefresh(), like),
+                                           dependency: render)
         actionButton.back.rx.tap
             .subscribe(onNext: {[weak self] _ in
                 guard let `self` = self else { return }
@@ -96,13 +105,38 @@ class NovelDetailViewController: UIViewController {
             .subscribe(onNext: {[weak self] (node: WNNovelNode) in
                 guard let `self` = self else { return }
                 self.navigationItem.title = node.storyTitle ?? ""
-                self.textContent.text = node.content
+                let attr  = NSMutableAttributedString(string: node.content ?? "")
+                attr.yy_color = UIColor.black
+                let font = UIFont.systemFont(ofSize: 15)
+                attr.yy_font = font
+                attr.yy_minimumLineHeight = font.lineHeight * 1.2
+                self.textContent.attributedText = attr
                 self.textContent.contentOffset = CGPoint.zero
                 self.novelList.headerBeginRefresh()
             })
             .addDisposableTo(disposeBag)
         
-            
+        viewModel.reloadNovel
+            .subscribe(onNext: {[weak self] (res: WNResult<Int>) in
+                switch res {
+                case .success(let value):
+                    self?.novelList.reloadItems(at: [IndexPath(row: value, section: 0)])
+                case .error(let error):
+                    print(error)
+                }
+            })
+            .addDisposableTo(disposeBag)
+        
+        nodeAction.subscribe(onNext: {[weak self] (action: NovelAction, node: WNNovelNode) in
+            switch action {
+            case .replay:
+                self?.performSegue(withIdentifier: R.segue.novelDetailViewController.sendNode, sender: node)
+            default:
+                break
+            }
+            })
+            .addDisposableTo(disposeBag)
+
     }
     
     
@@ -129,21 +163,33 @@ class NovelDetailViewController: UIViewController {
     }
 }
 
-extension NovelDetailViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension NovelDetailViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NovelCardCellDelegate {
     
+    func novelCardCollectionViewCell(didSelect cell: NovelCardCollectionViewCell, data: WNNovelNode, action: NovelAction) {
+        nodeAction.on(.next((action, data)))
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.novelData.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.novelData[indexPath.row].size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        (cell as? NovelCardCollectionViewCell)?.setNeedsDisplay()
+    }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let data = viewModel.novelData[indexPath.row]
-        performSegue(withIdentifier: R.segue.novelDetailViewController.showDetail, sender: data)
+        performSegue(withIdentifier: R.segue.novelDetailViewController.showDetail, sender: data.data)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: NovelCardCollectionViewCell = collectionView.dequeueReusableCell(indexPath)
         let data = viewModel.novelData[indexPath.row]
-        cell.configureWithModel(data)
+        cell.configureWithModel(data, delegate: self)
         return cell
     }
 }

@@ -10,104 +10,104 @@ import RxSwift
 import WeNovelKit
 
 
+typealias NovelListElement = NovelRenderModel
+typealias NovelListRefreshResult = (Bool, WNResult<[NovelListElement]>)
+typealias RequestBuilder = (Int) -> (WNRequestType)
+
+
 protocol NovelListViewModel {
-    var novelData: [WNNovelNode] { get }
-    var novelSignal: Observable<[WNNovelNode]> { get }
-    func loadNovel(forNew isNew: Bool) -> Observable<[WNNovelNode]>
+    var novelData: [NovelListElement] { get }
+    var novelSignal: Observable<[NovelListElement]> { get }
+    var reloadNovel: Observable<WNResult<Int>> { get }
 }
 
-
-protocol NovelRenderProtocol {
-}
-
-
-class NovelFeedViewModel: NovelListViewModel, ContainerViewModelProtocol {
-    
+class NovelBaseContainer: NovelListViewModel, ContainerViewModelProtocol {
     private let disposeBag = DisposeBag()
-    private let novelVariable = Variable<[WNNovelNode]>([])
+    private let novelVariable = Variable<[NovelListElement]>([])
+    private let reloadNovelSubject = PublishSubject<WNResult<Int>>()
+
     var page: Int = 0
     
-    var novelData: [WNNovelNode] { return novelVariable.value }
-    var novelSignal: Observable<[WNNovelNode]> { return novelVariable.asObservable()}
+    var reloadNovel: Observable<WNResult<Int>>  { return reloadNovelSubject.asObservable() }
+    var novelData: [NovelListElement] { return novelVariable.value }
+    var novelSignal: Observable<[NovelListElement]> { return novelVariable.asObservable()}
     
-    init(input refresh:  Observable<Bool>, dependency render: NovelRenderProtocol) {
-        refresh.flatMap({  isNew in
-            return self.loadNovel(forNew: isNew)
-                .mapToResult(error: "Load Error")
-            })            
-            .subscribe(onNext: {[weak self] (res: WNResult<[WNNovelNode]>) in
+    init(input: (refresh:  Observable<Bool>, like: Observable<(Bool, WNNovelNode)>),
+         dependency: (render: NovelRenderProtocol, request: RequestBuilder)) {
+        
+        
+        input.like
+            .flatMap {[weak self] (isLike: Bool, node: WNNovelNode) -> Observable<WNResult<Int>> in
+                guard let `self` = self, let id = node.id else {
+                    return Observable.just(WNResult<Int>.error(error: NSError.build(desc: "Missing Id")))
+                }
+                let index = self.novelData.index(where: { (render: NovelRenderModel) -> Bool in
+                    return render.data == node
+                })
+                guard let i = index else {
+                    return Observable.just(WNResult<Int>.error(error: NSError.build(desc: "Data not found")))
+                }
+                var data = self.novelVariable.value[i].data
+                data.changLikeState(like: isLike)
+                self.novelVariable.value[i].forceChangeData(data: data)
+                let req = isLike ? WNRequest.Novel.like(id: id) : WNRequest.Novel.dislike(id: id)
+                return WNNetworking.netDefaultRequest(req)
+                    .mapToValue(WNResult<Int>.success(value: i),
+                                valueOnError: WNResult<Int>.success(value: i))
+            }.subscribe {[weak self] event in
+                self?.reloadNovelSubject.on(event)
+            }
+            .addDisposableTo(disposeBag)
+        
+        
+        
+        input.refresh.flatMap({[weak self]  isNew -> Observable<NovelListRefreshResult> in
+            let req = dependency.request(self?.changePage(forNew: isNew) ?? 0)
+            let netReq: Observable<[WNNovelNode]> = WNNetworking.modelArrayNetRequest(req, key: "nodes")
+            return netReq.map(dependency.render.render)
+                .mapToResult(error: "Load fail")
+                .map({ (isNew, $0) })
+            })
+            .subscribe(onNext: {[weak self] (isNew, res) in
+                guard let `self` = self else { return }
                 switch res {
                 case .success(let value):
-                    self?.novelVariable.value = value
+                    var data = isNew ? [NovelListElement]() : self.novelVariable.value
+                    data.append(contentsOf: value)
+                    self.novelVariable.value = data
                 case .error(let error):
+                    self.resetPageWhenError(forNew: isNew)
                     print(error.localizedDescription ?? "")
                 }
             })
             .addDisposableTo(disposeBag)
     }
     
-    func loadNovel(forNew isNew: Bool) -> Observable<[WNNovelNode]> {
-        return WNNetworking.modelArrayNetRequest(WNRequest.Novel.home(page: changePage(forNew: isNew)), key: "nodes")
-            .map({ (data: [WNNovelNode]) -> [WNNovelNode] in
-                var current = isNew ? [WNNovelNode]() : self.novelVariable.value
-                current.append(contentsOf: data)
-                return current
-            })
-            .do(onNext: { data in
-                self.novelVariable.value = data
-            }, onError: { error  in
-                self.resetPageWhenError(forNew: isNew)
-            })
-    }
-
+    
 }
 
 
+class NovelFeedViewModel: NovelBaseContainer {
 
-class NovelNodeFeedViewModel: NovelListViewModel, ContainerViewModelProtocol {
-
-    private let disposeBag = DisposeBag()
-    private let currentNode: OptionalVariable<WNNovelNode>
-    private let novelVariable = Variable<[WNNovelNode]>([])
-    var page: Int = 0
-    
-    var nodeData: WNNovelNode? { return currentNode.value }
-    var novelData: [WNNovelNode] { return novelVariable.value }
-    var nodeChange: Observable<WNNovelNode> { return  currentNode.asObservable() }
-    var novelSignal: Observable<[WNNovelNode]> { return novelVariable.asObservable()}
-    
-    init(input: (node: WNNovelNode?,
-        refresh:  Observable<Bool>),
+    init(input: (refresh:  Observable<Bool>, like: Observable<(Bool, WNNovelNode)>),
          dependency render: NovelRenderProtocol) {
-        
+        super.init(input: input, dependency: (render: render, request: { WNRequest.Novel.home(page: $0) }))
+    }
+}
+
+
+
+class NovelNodeFeedViewModel: NovelBaseContainer {
+
+    private let currentNode: OptionalVariable<WNNovelNode>
+    var nodeData: WNNovelNode? { return currentNode.value }
+    var nodeChange: Observable<WNNovelNode> { return  currentNode.asObservable() }
+    
+    init(input: (node: WNNovelNode?, refresh:  Observable<Bool>, like: Observable<(Bool, WNNovelNode)>),
+         dependency render: NovelRenderProtocol) {
         currentNode = OptionalVariable<WNNovelNode>(input.node)
-        
-        input.refresh.flatMap({ isNew in
-            return self.loadNovel(forNew: isNew)
-                .mapToResult(error: "Load error")
-            })
-            .subscribe(onNext: {[weak self] (res: WNResult<[WNNovelNode]>) in
-                switch res {
-                case .success(let value):
-                    self?.novelVariable.value = value
-                case .error(let error):
-                    print(error.localizedDescription ?? "")
-                }
-            })
-            .addDisposableTo(disposeBag)
+        super.init(input: (input.refresh ,input.like),
+                   dependency: (render: render, request: { WNRequest.Novel.home(page: $0) }))
     }
     
-    func loadNovel(forNew isNew: Bool) -> Observable<[WNNovelNode]> {
-        return WNNetworking.modelArrayNetRequest(WNRequest.Novel.home(page: changePage(forNew: isNew)), key: "nodes")
-            .map({ (data: [WNNovelNode]) -> [WNNovelNode] in
-                var current = isNew ? [WNNovelNode]() : self.novelVariable.value
-                current.append(contentsOf: data)
-                return current
-            })
-            .do(onNext: { data in
-                self.novelVariable.value = data
-            }, onError: { error  in
-                self.resetPageWhenError(forNew: isNew)
-            })
-    }
 }

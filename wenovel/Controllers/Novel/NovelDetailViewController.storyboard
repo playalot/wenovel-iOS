@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-x3-8mL">
-                                <rect key="frame" x="16" y="248" width="343" height="419"/>
+                                <rect key="frame" x="0.0" y="248" width="375" height="419"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j0M-6t-MT4">
                                     <size key="itemSize" width="50" height="50"/>
@@ -74,12 +74,12 @@
                             <constraint firstItem="PgH-5m-i9G" firstAttribute="leading" secondItem="T9r-Wu-rWh" secondAttribute="leading" constant="30" id="HKR-Hb-Jwo"/>
                             <constraint firstItem="S7d-2G-YYc" firstAttribute="top" secondItem="PgH-5m-i9G" secondAttribute="bottom" constant="20" id="Kc6-Em-hhh"/>
                             <constraint firstItem="c13-YJ-WjI" firstAttribute="top" secondItem="Yd4-W3-Jhv" secondAttribute="bottom" constant="200" id="N35-vb-cbC"/>
-                            <constraint firstItem="ibr-x3-8mL" firstAttribute="trailing" secondItem="11A-1r-WLU" secondAttribute="trailingMargin" id="OMQ-4X-WrN"/>
+                            <constraint firstAttribute="trailing" secondItem="ibr-x3-8mL" secondAttribute="trailing" id="P19-5C-O4G"/>
                             <constraint firstItem="ibr-x3-8mL" firstAttribute="top" secondItem="c13-YJ-WjI" secondAttribute="bottom" constant="8" id="SCf-OC-otH"/>
-                            <constraint firstItem="ibr-x3-8mL" firstAttribute="leading" secondItem="11A-1r-WLU" secondAttribute="leadingMargin" id="Wh6-jm-XvT"/>
                             <constraint firstItem="PgH-5m-i9G" firstAttribute="trailing" secondItem="T9r-Wu-rWh" secondAttribute="trailing" constant="-30" id="eVQ-gH-qjC"/>
                             <constraint firstItem="c13-YJ-WjI" firstAttribute="centerX" secondItem="11A-1r-WLU" secondAttribute="centerX" id="g3S-oO-tVp"/>
                             <constraint firstItem="S7d-2G-YYc" firstAttribute="top" secondItem="T9r-Wu-rWh" secondAttribute="bottom" id="ldz-Vq-1OJ"/>
+                            <constraint firstItem="ibr-x3-8mL" firstAttribute="leading" secondItem="11A-1r-WLU" secondAttribute="leading" id="n2B-gx-hiR"/>
                             <constraint firstItem="c13-YJ-WjI" firstAttribute="top" secondItem="yhA-od-VRC" secondAttribute="bottom" constant="8" id="pxh-au-M76"/>
                             <constraint firstItem="yhA-od-VRC" firstAttribute="top" secondItem="Yd4-W3-Jhv" secondAttribute="bottom" constant="8" id="sUN-GA-soe"/>
                             <constraint firstItem="S7d-2G-YYc" firstAttribute="top" secondItem="ibr-x3-8mL" secondAttribute="bottom" id="sgA-2o-bny"/>

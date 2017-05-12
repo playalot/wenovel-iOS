@@ -37,6 +37,8 @@ public struct WNHTTPResponseModel: HTTPResponseModel {
     }
 }
 
+
+public typealias WNRequestType = RequestParameters
 public struct WNRequest {
     
     public enum Admin: RequestParameters {

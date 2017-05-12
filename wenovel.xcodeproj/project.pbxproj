@@ -28,6 +28,7 @@
 		6A629C371EC2B83100A1BD09 /* MineInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A629C361EC2B83100A1BD09 /* MineInfoViewController.storyboard */; };
 		6A629C391EC2B84200A1BD09 /* MineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A629C381EC2B84200A1BD09 /* MineInfoViewController.swift */; };
 		6A629C3C1EC2C08A00A1BD09 /* MineInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A629C3B1EC2C08A00A1BD09 /* MineInfoTableViewCell.swift */; };
+		6A8CB4BD1EC5902700054DD9 /* QuickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CB4BC1EC5902700054DD9 /* QuickButton.swift */; };
 		6AB031221EC02FA9001D123D /* cacheservice.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AB031201EC02FA9001D123D /* cacheservice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AB031251EC02FA9001D123D /* CacheService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB0311E1EC02FA9001D123D /* CacheService.framework */; };
 		6AB031261EC02FA9001D123D /* CacheService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB0311E1EC02FA9001D123D /* CacheService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -151,6 +152,7 @@
 		6A629C361EC2B83100A1BD09 /* MineInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MineInfoViewController.storyboard; sourceTree = "<group>"; };
 		6A629C381EC2B84200A1BD09 /* MineInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineInfoViewController.swift; sourceTree = "<group>"; };
 		6A629C3B1EC2C08A00A1BD09 /* MineInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineInfoTableViewCell.swift; sourceTree = "<group>"; };
+		6A8CB4BC1EC5902700054DD9 /* QuickButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickButton.swift; sourceTree = "<group>"; };
 		6AB0311E1EC02FA9001D123D /* CacheService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB031201EC02FA9001D123D /* cacheservice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cacheservice.h; sourceTree = "<group>"; };
 		6AB031211EC02FA9001D123D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				6AC214021EC2CBF3004AFA41 /* SeparatedLineTableViewCell.swift */,
 				6AC0D64D1EC45C5800889B8A /* RxScrollViewRefresh.swift */,
 				6AC2140D1EC2F0BF004AFA41 /* BarButton.swift */,
+				6A8CB4BC1EC5902700054DD9 /* QuickButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 				6AB0313F1EC1B0C8001D123D /* UIKit+Extension.swift in Sources */,
 				6AC214141EC32712004AFA41 /* Reusable.swift in Sources */,
 				6AC214061EC2CD06004AFA41 /* BaseNavigationViewController.swift in Sources */,
+				6A8CB4BD1EC5902700054DD9 /* QuickButton.swift in Sources */,
 				6AB0313D1EC1A6EF001D123D /* MobileLoginViewController.swift in Sources */,
 				94F41EB6E5439E38B46E01F9 /* SendStartViewController.swift in Sources */,
 				6AB0313B1EC0888A001D123D /* ValidationService.swift in Sources */,
